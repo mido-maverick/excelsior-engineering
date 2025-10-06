@@ -41,5 +41,35 @@ public static class 木構造建築物設計及施工技術規範
         public enum 針闊葉樹別 { 針葉, 闊葉 }
         public enum 木材類別 { Ⅰ = 1, Ⅱ, Ⅲ, Ⅳ }
         public enum 木材等級 { 普通, 上等 }
+
+        public abstract record class 結構用材料;
+
+        public record class 木材 : 結構用材料
+        {
+            public 樹種 樹種 { get; set; }
+
+            public 針闊葉樹別 針闊葉樹別 => 樹種 switch
+            {
+                >= 樹種.花旗松 and <= 樹種.放射松 => 針闊葉樹別.針葉,
+                >= 樹種.樫木 and <= 樹種.柳桉 => 針闊葉樹別.闊葉,
+                _ => throw new ArgumentOutOfRangeException()
+            };
+
+            public 木材類別 木材類別 => 樹種 switch
+            {
+                樹種.花旗松 or 樹種.俄國落葉松 => 木材類別.Ⅰ,
+                >= 樹種.羅漢柏 and <= 樹種.硬木南方松 => 木材類別.Ⅱ,
+                >= 樹種.赤松 and <= 樹種.世界爺 => 木材類別.Ⅲ,
+                >= 樹種.冷杉 and <= 樹種.放射松 => 木材類別.Ⅳ,
+                樹種.樫木 => 木材類別.Ⅰ,
+                >= 樹種.栗木 and <= 樹種.硬槭木 => 木材類別.Ⅱ,
+                樹種.柳桉 => 木材類別.Ⅲ,
+                _ => throw new ArgumentOutOfRangeException()
+            };
+
+            public 木材等級 木材等級 { get; set; }
+        }
+
+        public record class 合板 : 結構用材料;
     }
 }
