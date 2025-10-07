@@ -10,4 +10,10 @@
 /// </remarks>
 public static class Jass5
 {
+    public enum 澆置速度
+    {
+        十以下,
+        十至二十,
+        二十以上
+    }
 }
