@@ -108,6 +108,20 @@ public static class 木構造建築物設計及施工技術規範
         public record class 合板 : 結構用材料
         {
             public 合板等級 等級 { get; set; }
+
+            /// <summary>
+            /// 面板纖維垂直方向之長期容許拉應力 Lft⟂
+            /// </summary>
+            public static Pressure 垂直方向之長期容許拉應力(Length 厚度, 合板等級 等級) => Pressure.FromKilogramsForcePerSquareCentimeter((厚度.Millimeters, 等級) switch
+            {
+                (15, _) => 55,
+                _ => double.NaN
+            });
+
+            /// <summary>
+            /// 面板纖維垂直方向之短期容許拉應力 Sft⟂
+            /// </summary>
+            public static Pressure 垂直方向之短期容許拉應力(Length 厚度, 合板等級 等級) => 2 * 垂直方向之長期容許拉應力(厚度, 等級);
         }
     }
 }
