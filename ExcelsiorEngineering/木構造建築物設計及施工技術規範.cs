@@ -43,6 +43,7 @@ public static class 木構造建築物設計及施工技術規範
         public enum 針闊葉樹別 { 針葉, 闊葉 }
         public enum 木材類別 { Ⅰ = 1, Ⅱ, Ⅲ, Ⅳ }
         public enum 木材等級 { 普通, 上等 }
+        public enum 合板等級 { A, B, C }
 
         public abstract record class 結構用材料;
 
@@ -98,6 +99,9 @@ public static class 木構造建築物設計及施工技術規範
             });
         }
 
-        public record class 合板 : 結構用材料;
+        public record class 合板 : 結構用材料
+        {
+            public 合板等級 等級 { get; set; }
+        }
     }
 }
