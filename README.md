@@ -20,6 +20,7 @@
 |彈性模數|Elastic Modulus|*E*|
 |係數|Factor||
 |力|Force|*F*|
+|主梁|Girder||
 |接頭|Joint||
 |載重|Load||
 |彎矩|Moment|*M*|
