@@ -20,6 +20,56 @@ internal class Converter
         return elements;
     }
 
+    protected void Set(SdtElement sdtElement, string text)
+    {
+        switch (sdtElement)
+        {
+            case SdtRun sdtRun:
+                Set(sdtRun, text);
+                break;
+            case SdtCell sdtCell:
+                Set(sdtCell, text);
+                break;
+            default:
+                throw new NotSupportedException();
+        }
+    }
+
+    protected void Set(SdtRun sdtRun, string text)
+    {
+        var sdtContentRun = sdtRun.SdtContentRun ?? throw new InvalidOperationException();
+
+        var runs = sdtContentRun.Elements<Run>();
+        if (!runs.Any()) throw new InvalidOperationException();
+        foreach (var run in runs.Skip(1).ToList()) run.Remove();
+
+        var textElements = runs.First().Elements<Text>();
+        if (!textElements.Any()) throw new InvalidOperationException();
+        foreach (var textElement in textElements.Skip(1).ToList()) textElement.Remove();
+
+        textElements.First().Text = text;
+    }
+
+    protected void Set(SdtCell sdtCell, string text)
+    {
+        var sdtContentCell = sdtCell.SdtContentCell ?? throw new InvalidOperationException();
+        var tableCell = sdtContentCell.GetFirstChild<TableCell>() ?? throw new InvalidOperationException();
+
+        var paragraphs = tableCell.Elements<Paragraph>();
+        if (!paragraphs.Any()) throw new InvalidOperationException();
+        foreach (var paragraph in paragraphs.Skip(1).ToList()) paragraph.Remove();
+
+        var runs = paragraphs.First().Elements<Run>();
+        if (!runs.Any()) throw new InvalidOperationException();
+        foreach (var run in runs.Skip(1).ToList()) run.Remove();
+
+        var textElements = runs.First().Elements<Text>();
+        if (!textElements.Any()) throw new InvalidOperationException();
+        foreach (var textElement in textElements.Skip(1).ToList()) textElement.Remove();
+
+        textElements.First().Text = text;
+    }
+
     protected void Set(SdtElement sdtElement, object? obj, string? format = null)
     {
         switch (obj)
