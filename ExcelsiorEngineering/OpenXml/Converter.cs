@@ -3,7 +3,7 @@ using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace ExcelsiorEngineering.OpenXml;
 
-internal class Converter
+public class Converter
 {
     protected List<TElement> GenerateElements<TElement>(TElement template, IEnumerable<object> objects)
         where TElement : OpenXmlCompositeElement
