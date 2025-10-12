@@ -75,20 +75,26 @@ public class Converter
         switch (obj)
         {
             case bool b:
-                break;
+                throw new NotImplementedException();
             case int i:
+                Set(sdtElement, i.ToString(format ?? "G"));
                 break;
             case double d:
+                Set(sdtElement, d.ToString(format ?? "0.0##"));
+                break;
+            case Enum e:
+                Set(sdtElement, e.ToString(format ?? "G"));
                 break;
             case string s:
+                Set(sdtElement, s);
                 break;
             case null:
-                break;
+                throw new NotImplementedException();
             case object when obj.GetType().IsClass:
                 Populate(sdtElement, obj);
                 break;
             default:
-                break;
+                throw new NotSupportedException();
         }
     }
 
