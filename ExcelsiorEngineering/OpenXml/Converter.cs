@@ -15,6 +15,17 @@ public class Converter
     #endregion
 
     #region Methods
+    protected OpenXmlPackage OpenTemplate(string path)
+    {
+        var extension = Path.GetExtension(path).ToLowerInvariant();
+        return extension switch
+        {
+            ".docx" or ".dotx" => WordprocessingDocument.Open(path, isEditable: false),
+            ".xlsx" or ".xltx" => SpreadsheetDocument.Open(path, isEditable: false),
+            _ => throw new NotSupportedException(),
+        };
+    }
+
     protected List<TElement> GenerateElements<TElement>(TElement template, IEnumerable<object> objects)
         where TElement : OpenXmlCompositeElement
     {
