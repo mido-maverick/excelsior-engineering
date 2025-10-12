@@ -5,6 +5,11 @@ namespace ExcelsiorEngineering.OpenXml;
 
 public class Converter
 {
+    #region Properties
+
+    #endregion
+
+    #region Methods
     protected List<TElement> GenerateElements<TElement>(TElement template, IEnumerable<object> objects)
         where TElement : OpenXmlCompositeElement
     {
@@ -115,4 +120,5 @@ public class Converter
             Set(sdtElement, propertyValue);
         }
     }
+    #endregion
 }
