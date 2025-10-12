@@ -1,4 +1,5 @@
 ﻿using DocumentFormat.OpenXml;
+using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace ExcelsiorEngineering.OpenXml;
@@ -6,7 +7,11 @@ namespace ExcelsiorEngineering.OpenXml;
 public class Converter
 {
     #region Properties
-
+    protected WordprocessingDocument? WordprocessingDocument { get; set; }
+    protected MainDocumentPart? MainDocumentPart => WordprocessingDocument?.MainDocumentPart;
+    protected Document? Document => MainDocumentPart?.Document;
+    protected Body? Body => Document?.Body;
+    protected IEnumerable<SdtBlock>? SdtBlocks => Body?.Elements<SdtBlock>();
     #endregion
 
     #region Methods
