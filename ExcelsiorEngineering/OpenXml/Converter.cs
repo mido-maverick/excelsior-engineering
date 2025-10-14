@@ -1,11 +1,21 @@
 ﻿using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
+using Microsoft.Extensions.FileProviders;
 
 namespace ExcelsiorEngineering.OpenXml;
 
 public class Converter
 {
+    #region Fields
+    private readonly IFileProvider? _fileProvider;
+    #endregion
+
+    #region Constructors
+    public Converter() { }
+    public Converter(IFileProvider fileProvider) { _fileProvider = fileProvider; }
+    #endregion
+
     #region Properties
     protected WordprocessingDocument? WordprocessingDocument { get; set; }
     protected MainDocumentPart? MainDocumentPart => WordprocessingDocument?.MainDocumentPart;
