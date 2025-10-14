@@ -40,6 +40,26 @@ public class Converter
     #endregion
 
     #region Methods
+    public Dictionary<string, Dictionary<string, string>[]> ExtractStringData(Stream stream)
+    {
+        throw new NotImplementedException();
+    }
+
+    private Dictionary<string, string>[] ExtractStringData(Worksheet worksheet, SS.Table table)
+    {
+        throw new NotImplementedException();
+    }
+
+    private Dictionary<string, string> ExtractStringData(Row row, IEnumerable<TableColumn> tableColumns)
+    {
+        throw new NotImplementedException();
+    }
+
+    private string ExtractStringData(Cell cell)
+    {
+        throw new NotImplementedException();
+    }
+
     public virtual void GenerateDocument(Stream stream, object? dataModel = null)
     {
         WordprocessingDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
