@@ -171,7 +171,9 @@ public class Converter
             var tagValue = sdtElement.SdtProperties?.GetFirstChild<Tag>()?.Val?.Value;
             if (tagValue is null) continue;
 
-            var property = properties.FirstOrDefault(p => p.Name == tagValue);
+            var property = properties.FirstOrDefault(p =>
+                p.Name == tagValue ||
+                p.GetCustomAttribute<DisplayAttribute>()?.Name == tagValue);
             if (property is null) continue;
 
             var propertyValue = property.GetValue(dataModel);
