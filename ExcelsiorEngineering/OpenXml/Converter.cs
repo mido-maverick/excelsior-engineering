@@ -1,7 +1,9 @@
 ﻿using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
+using SS = DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Wordprocessing;
+using WP = DocumentFormat.OpenXml.Wordprocessing;
 using Microsoft.Extensions.FileProviders;
 
 namespace ExcelsiorEngineering.OpenXml;
@@ -42,7 +44,7 @@ public class Converter
     {
         WordprocessingDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
         WordprocessingDocument.AddMainDocumentPart();
-        MainDocumentPart!.Document = new Document(new Body(new Paragraph(new Run(new Text("Hello!")))));
+        MainDocumentPart!.Document = new Document(new Body(new Paragraph(new WP.Run(new WP.Text("Hello!")))));
         WordprocessingDocument.Dispose();
         WordprocessingDocument = null;
     }
@@ -115,11 +117,11 @@ public class Converter
     {
         var sdtContentRun = sdtRun.SdtContentRun ?? throw new InvalidOperationException();
 
-        var runs = sdtContentRun.Elements<Run>();
+        var runs = sdtContentRun.Elements<WP.Run>();
         if (!runs.Any()) throw new InvalidOperationException();
         foreach (var run in runs.Skip(1).ToList()) run.Remove();
 
-        var textElements = runs.First().Elements<Text>();
+        var textElements = runs.First().Elements<WP.Text>();
         if (!textElements.Any()) throw new InvalidOperationException();
         foreach (var textElement in textElements.Skip(1).ToList()) textElement.Remove();
 
@@ -135,11 +137,11 @@ public class Converter
         if (!paragraphs.Any()) throw new InvalidOperationException();
         foreach (var paragraph in paragraphs.Skip(1).ToList()) paragraph.Remove();
 
-        var runs = paragraphs.First().Elements<Run>();
+        var runs = paragraphs.First().Elements<WP.Run>();
         if (!runs.Any()) throw new InvalidOperationException();
         foreach (var run in runs.Skip(1).ToList()) run.Remove();
 
-        var textElements = runs.First().Elements<Text>();
+        var textElements = runs.First().Elements<WP.Text>();
         if (!textElements.Any()) throw new InvalidOperationException();
         foreach (var textElement in textElements.Skip(1).ToList()) textElement.Remove();
 
