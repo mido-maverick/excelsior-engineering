@@ -25,7 +25,7 @@ public class Converter
     #endregion
 
     #region Methods
-    public virtual void GenerateDocument(Stream stream, object? obj = null)
+    public virtual void GenerateDocument(Stream stream, object? dataModel = null)
     {
         WordprocessingDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
         WordprocessingDocument.AddMainDocumentPart();
@@ -138,11 +138,11 @@ public class Converter
         }
     }
 
-    protected void Populate(SdtElement container, object obj)
+    protected void Populate(SdtElement container, object dataModel)
     {
         if (container is not (SdtBlock or SdtRow)) throw new NotSupportedException();
         var sdtElements = container.Descendants<SdtElement>();
-        var properties = obj.GetType().GetProperties();
+        var properties = dataModel.GetType().GetProperties();
         foreach (var sdtElement in sdtElements)
         {
             var tagValue = sdtElement.SdtProperties?.GetFirstChild<Tag>()?.Val?.Value;
@@ -151,7 +151,7 @@ public class Converter
             var property = properties.FirstOrDefault(p => p.Name == tagValue);
             if (property is null) continue;
 
-            var propertyValue = property.GetValue(obj);
+            var propertyValue = property.GetValue(dataModel);
             Set(sdtElement, propertyValue);
         }
     }
