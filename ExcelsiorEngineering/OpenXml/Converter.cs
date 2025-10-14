@@ -175,7 +175,18 @@ public class Converter
             if (property is null) continue;
 
             var propertyValue = property.GetValue(dataModel);
-            Set(sdtElement, propertyValue);
+            try
+            {
+                Set(sdtElement, propertyValue);
+            }
+            catch (NotImplementedException)
+            {
+                continue;
+            }
+            catch (NotSupportedException)
+            {
+                continue;
+            }
         }
     }
     #endregion
