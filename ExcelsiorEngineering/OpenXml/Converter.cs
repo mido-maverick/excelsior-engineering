@@ -1,5 +1,6 @@
 ﻿using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Wordprocessing;
 using Microsoft.Extensions.FileProviders;
 
@@ -17,6 +18,18 @@ public class Converter
     #endregion
 
     #region Properties
+    private SpreadsheetDocument? SpreadsheetDocument { get; set; }
+    private WorkbookPart? WorkbookPart => SpreadsheetDocument?.WorkbookPart;
+    private Workbook? Workbook => WorkbookPart?.Workbook;
+    private Sheets? Sheets => Workbook?.Sheets;
+    private SharedStringTablePart? SharedStringTablePart => WorkbookPart?.SharedStringTablePart;
+    private SharedStringTable? SharedStringTable => SharedStringTablePart?.SharedStringTable;
+    private WorkbookStylesPart? WorkbookStylesPart => WorkbookPart?.WorkbookStylesPart;
+    private Stylesheet? Stylesheet => WorkbookStylesPart?.Stylesheet;
+    private NumberingFormats? NumberingFormats => Stylesheet?.NumberingFormats;
+    private CellFormats? CellFormats => Stylesheet?.CellFormats;
+    private IEnumerable<WorksheetPart>? WorksheetParts => WorkbookPart?.WorksheetParts;
+
     protected WordprocessingDocument? WordprocessingDocument { get; set; }
     protected MainDocumentPart? MainDocumentPart => WordprocessingDocument?.MainDocumentPart;
     protected Document? Document => MainDocumentPart?.Document;
