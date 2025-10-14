@@ -25,6 +25,15 @@ public class Converter
     #endregion
 
     #region Methods
+    public virtual void GenerateDocument(Stream stream, object? obj = null)
+    {
+        WordprocessingDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
+        WordprocessingDocument.AddMainDocumentPart();
+        MainDocumentPart!.Document = new Document(new Body(new Paragraph(new Run(new Text("Hello!")))));
+        WordprocessingDocument.Dispose();
+        WordprocessingDocument = null;
+    }
+
     protected OpenXmlPackage OpenTemplate(string path)
     {
         var extension = Path.GetExtension(path).ToLowerInvariant();
