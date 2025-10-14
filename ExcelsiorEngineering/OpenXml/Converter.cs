@@ -8,6 +8,18 @@ using Microsoft.Extensions.FileProviders;
 
 namespace ExcelsiorEngineering.OpenXml;
 
+/// <summary>
+///     <para>
+///         Provides bidirectional conversion between data objects and Open XML documents (Excel and Word).
+///     </para>
+///     <para>
+///         Supports
+///         <list type="bullet">
+///             <item>extraction of structured data from existing documents, and</item>
+///             <item>document generation from templates with data population via tagged content controls.</item>
+///         </list>
+///     </para>
+/// </summary>
 public class Converter
 {
     #region Fields
