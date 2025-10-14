@@ -34,6 +34,29 @@ public class Converter
         WordprocessingDocument = null;
     }
 
+    public void GenerateDocument(string templatePath, Stream stream, IEnumerable<(string tag, IEnumerable<object> dataModels)> sections)
+    {
+        if (OpenTemplate(templatePath) is not WordprocessingDocument template) throw new InvalidOperationException();
+        WordprocessingDocument = template.Clone(stream, isEditable: true);
+        if (Body is null) throw new InvalidOperationException();
+        if (SdtBlocks is null) throw new InvalidOperationException();
+        foreach (var section in sections)
+        {
+            var templateBlock = SdtBlocks.FirstOrDefault(sdt => sdt.SdtProperties?.GetFirstChild<Tag>()?.Val == section.tag);
+            if (templateBlock is null) continue;
+            var generatedBlocks = GenerateElements(templateBlock, section.dataModels);
+        }
+        Body.Elements<OpenXmlElement>()
+            .Where(e =>
+                e is not SdtBlock ||
+                e is SdtBlock sdt &&
+                !sections.Select(s => s.tag).Contains(sdt.SdtProperties?.GetFirstChild<Tag>()?.Val?.Value))
+            .ToList()
+            .ForEach(e => e.Remove());
+        WordprocessingDocument?.Dispose();
+        WordprocessingDocument = null;
+    }
+
     protected OpenXmlPackage OpenTemplate(string path)
     {
         var extension = Path.GetExtension(path).ToLowerInvariant();
