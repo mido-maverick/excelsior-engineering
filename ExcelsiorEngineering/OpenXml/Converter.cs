@@ -226,10 +226,13 @@ public class Converter
                 p.GetCustomAttribute<DisplayAttribute>()?.Name == tagValue);
             if (property is null) continue;
 
+            var displayAttribute = property.GetCustomAttribute<DisplayAttribute>();
+            var displayFormatAttribute = property.GetCustomAttribute<DisplayFormatAttribute>();
+            var format = displayFormatAttribute?.DataFormatString;
             var propertyValue = property.GetValue(dataModel);
             try
             {
-                Set(sdtElement, propertyValue);
+                Set(sdtElement, propertyValue, format);
             }
             catch (NotImplementedException)
             {
