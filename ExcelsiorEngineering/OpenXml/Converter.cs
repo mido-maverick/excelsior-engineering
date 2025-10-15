@@ -198,6 +198,9 @@ public class Converter
             case string s:
                 Set(sdtElement, s);
                 break;
+            case UnitsNet.IQuantity q:
+                Set(sdtElement, q.ToString(format ?? "0.0##", formatProvider: null));
+                break;
             case null:
                 throw new NotImplementedException();
             case object when obj.GetType().IsClass:
