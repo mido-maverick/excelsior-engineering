@@ -205,7 +205,7 @@ public class Converter
         }
     }
 
-    private string Format(object obj, string? format = null) => obj switch
+    private static string Format(object obj, string? format = null) => obj switch
     {
         int i => i.ToString(format ?? "G"),
         double d => d.ToString(format ?? "0.0##"),
