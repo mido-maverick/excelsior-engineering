@@ -186,14 +186,11 @@ public class Converter
         {
             case bool b:
                 throw new NotImplementedException();
-            case int or double or Enum:
+            case int or double or Enum or UnitsNet.IQuantity:
                 Set(sdtElement, Format(obj, format));
                 break;
             case string s:
                 Set(sdtElement, s);
-                break;
-            case UnitsNet.IQuantity q:
-                Set(sdtElement, q.ToString(format ?? "0.0##", formatProvider: null));
                 break;
             case null:
                 throw new NotImplementedException();
@@ -210,6 +207,10 @@ public class Converter
         int i => i.ToString(format ?? "G"),
         double d => d.ToString(format ?? "0.0##"),
         Enum e => e.ToString(format ?? "G"),
+        UnitsNet.IQuantity q =>
+            format is null ? q.ToString("0.0##", formatProvider: null) :
+            format.EndsWith(" omit") ? q.Value.ToString(format.Replace(" omit", string.Empty)) :
+            q.ToString(format, formatProvider: null),
         _ => obj.ToString() ?? string.Empty,
     };
 
