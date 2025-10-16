@@ -186,14 +186,8 @@ public class Converter
         {
             case bool b:
                 throw new NotImplementedException();
-            case int i:
-                Set(sdtElement, i.ToString(format ?? "G"));
-                break;
-            case double d:
-                Set(sdtElement, d.ToString(format ?? "0.0##"));
-                break;
-            case Enum e:
-                Set(sdtElement, e.ToString(format ?? "G"));
+            case int or double or Enum:
+                Set(sdtElement, Format(obj, format));
                 break;
             case string s:
                 Set(sdtElement, s);
@@ -210,6 +204,14 @@ public class Converter
                 throw new NotSupportedException();
         }
     }
+
+    private string Format(object obj, string? format = null) => obj switch
+    {
+        int i => i.ToString(format ?? "G"),
+        double d => d.ToString(format ?? "0.0##"),
+        Enum e => e.ToString(format ?? "G"),
+        _ => obj.ToString() ?? string.Empty,
+    };
 
     protected void Populate(SdtElement container, object dataModel)
     {
