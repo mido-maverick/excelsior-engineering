@@ -1,5 +1,10 @@
 # Excelsior Engineering
 
+## Overview
+
+[Excelsior Engineering](https://github.com/mido-maverick/excelsior-engineering/) aims to provide engineers and developers
+with a robust C# library for integration between engineering calculations, data managment, and automation.
+
 ## 常用詞彙
 
 |中文|英文|符號|
