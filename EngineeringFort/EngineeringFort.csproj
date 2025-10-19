@@ -9,10 +9,14 @@
     <Title>Engineering Fort</Title>
     <Version>0.1.0</Version>
     <Authors>Mido Maverick</Authors>
-    <Description>A .NET class library for advanced engineering calculations.</Description>
+    <Description>A .NET class library for engineering design, analysis, and automation.</Description>
+    <ReleaseNotes>Initial</ReleaseNotes>
     <RepositoryUrl>https://github.com/mido-maverick/engineering-fort</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>civil;engineering</PackageTags>
+    <Copyright>Copyright © 2025 Mido Maverick</Copyright>
+    <PackageProjectUrl>https://github.com/mido-maverick/engineering-fort</PackageProjectUrl>
+    <PackageTags>civil;engineering;structural;taiwan</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
