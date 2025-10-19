@@ -2,8 +2,7 @@
 
 ## Overview
 
-[Engineering Fort](https://github.com/mido-maverick/engineering-fort/) aims to provide engineers and developers
-with a robust C# library for integration between engineering calculations, data managment, and automation.
+[Engineering Fort](https://github.com/mido-maverick/engineering-fort/) aims to provide models and utilities for engineering design, analysis, and automation. It focuses on abstract, theoretical representations of engineering concepts—deliberately extracted from professional software—to support clean, modular, and data-driven workflows. Developed in Taiwan and open to the world.
 
 ## 常用詞彙
 
