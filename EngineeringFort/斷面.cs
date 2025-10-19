@@ -1,6 +1,6 @@
 ﻿using UnitsNet;
 
-namespace ExcelsiorEngineering;
+namespace EngineeringFort;
 
 public interface I斷面
 {

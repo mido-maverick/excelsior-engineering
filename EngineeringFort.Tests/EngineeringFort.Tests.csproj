@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ExcelsiorEngineering\ExcelsiorEngineering.csproj" />
+    <ProjectReference Include="..\EngineeringFort\EngineeringFort.csproj" />
   </ItemGroup>
 
   <ItemGroup>

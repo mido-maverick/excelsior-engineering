@@ -6,11 +6,11 @@
     <Nullable>enable</Nullable>
     <IsPackable>True</IsPackable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Title>Excelsior Engineering</Title>
+    <Title>Engineering Fort</Title>
     <Version>0.1.0</Version>
     <Authors>Mido Maverick</Authors>
     <Description>A .NET class library for advanced engineering calculations.</Description>
-    <RepositoryUrl>https://github.com/mido-maverick/excelsior-engineering</RepositoryUrl>
+    <RepositoryUrl>https://github.com/mido-maverick/engineering-fort</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>civil;engineering</PackageTags>
   </PropertyGroup>

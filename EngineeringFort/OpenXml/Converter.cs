@@ -6,7 +6,7 @@ using DocumentFormat.OpenXml.Wordprocessing;
 using WP = DocumentFormat.OpenXml.Wordprocessing;
 using Microsoft.Extensions.FileProviders;
 
-namespace ExcelsiorEngineering.OpenXml;
+namespace EngineeringFort.OpenXml;
 
 /// <summary>
 ///     <para>
