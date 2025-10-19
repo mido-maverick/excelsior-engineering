@@ -4,6 +4,12 @@
 
 [Engineering Fort](https://github.com/mido-maverick/engineering-fort/) aims to provide models and utilities for engineering design, analysis, and automation. It focuses on abstract, theoretical representations of engineering concepts—deliberately extracted from professional software—to support clean, modular, and data-driven workflows. Developed in Taiwan and open to the world.
 
+What's included:
+
+- Structural calculations with [type-safe units](https://github.com/angularsen/UnitsNet/)
+- [Regional standards, specifications, and regulations](#法規參考)
+- [Document](https://github.com/dotnet/Open-XML-SDK/) utilities
+
 ## 常用詞彙
 
 |中文|英文|符號|
