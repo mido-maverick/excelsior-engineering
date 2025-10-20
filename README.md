@@ -24,6 +24,7 @@ What's included:
 |壓應力|Compressive Stress|$\sigma$|
 |連續梁|Continuous Beam||
 |臨界|Critical||
+|斷面|Cross Section||
 |斷面積|Cross-Sectional Area|$A$|
 |撓度|Deflection|$\delta$|
 |有效|Effective||
@@ -35,7 +36,6 @@ What's included:
 |載重|Load||
 |彎矩|Moment|$M$|
 |慣性矩|Moment of Inertia|$I$|
-|斷面|Section||
 |斷面模數|Section Modulus|$S$|
 |**剪**|Shear||
 |剪力|Shear Force|$V$|
