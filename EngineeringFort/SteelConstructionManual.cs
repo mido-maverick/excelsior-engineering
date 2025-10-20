@@ -1,6 +1,4 @@
-﻿using UnitsNet;
-
-namespace EngineeringFort;
+﻿namespace EngineeringFort;
 
 public static class SteelConstructionManual
 {

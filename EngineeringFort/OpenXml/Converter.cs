@@ -186,7 +186,7 @@ public class Converter
         {
             case bool b:
                 throw new NotImplementedException();
-            case int or double or Enum or UnitsNet.IQuantity:
+            case int or double or Enum or IQuantity:
                 Set(sdtElement, Format(obj, format));
                 break;
             case string s:
