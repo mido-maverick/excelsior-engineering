@@ -29,7 +29,7 @@ jobs:
         run: dotnet build engineering-fort.sln --configuration Release --no-restore
 
       - name: Run tests
-        run: dotnet test EngineeringFort.Tests/EngineeringFort.Tests.csproj --no-build --verbosity normal
+        run: dotnet test EngineeringFort.Tests/EngineeringFort.Tests.csproj --configuration Release --no-build --verbosity normal
 
       - name: Pack NuGet package
         run: dotnet pack EngineeringFort/EngineeringFort.csproj --configuration Release --no-build -o ./artifacts
