@@ -8,3 +8,8 @@ public interface ISideFormworkDesign
 public interface IBottomFormworkDesign
 {
 }
+
+public record class SideFormworkDesign : FormworkDesign, ISideFormworkDesign
+{
+    public virtual Pressure MaxSidePressure { get; set; }
+}
