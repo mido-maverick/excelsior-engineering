@@ -14,6 +14,7 @@ What's included:
 
 |中文|英文|符號|
 |-|-|-|
+|容許|Allowable||
 |面積|Area|$A$|
 |梁|Beam||
 |**彎**|Bending||
