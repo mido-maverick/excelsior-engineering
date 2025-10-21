@@ -29,6 +29,7 @@ What's included:
 |撓度|Deflection|$\delta$|
 |有效|Effective||
 |彈性模數|Elastic Modulus|$E$|
+|立面圖|Elevation||
 |係數|Factor||
 |力|Force|$F$|
 |主梁|Girder||
@@ -36,6 +37,8 @@ What's included:
 |載重|Load||
 |彎矩|Moment|$M$|
 |慣性矩|Moment of Inertia|$I$|
+|平面圖|Plan||
+|剖面圖|Section||
 |斷面模數|Section Modulus|$S$|
 |**剪**|Shear||
 |剪力|Shear Force|$V$|
