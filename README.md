@@ -32,6 +32,7 @@ What's included:
 |立面圖|Elevation||
 |係數|Factor||
 |力|Force|$F$|
+|模板|Formwork||
 |主梁|Girder||
 |接頭|Joint||
 |載重|Load||
