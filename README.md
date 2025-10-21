@@ -33,6 +33,10 @@ What's included:
 |係數|Factor||
 |力|Force|$F$|
 |模板|Formwork||
+|擱柵|Formwork Joist||
+|襯板|Formwork Sheathing||
+|貫材|Formwork Stringer||
+|螺桿|Formwork Tie Rod||
 |主梁|Girder||
 |接頭|Joint||
 |載重|Load||
