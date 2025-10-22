@@ -14,9 +14,9 @@ public abstract record class FormworkLayerCheck<T> : FormworkLayerCheck where T 
 
 public record class FormworkSheathingLayerCheck : FormworkLayerCheck<FormworkSheathing>
 {
-    public virtual Length SupportSpacing { get; set; }
-
     public virtual Length UnitStripWidth { get; set; }
+
+    public virtual Length SupportSpacing { get; set; }
 
     public virtual ForcePerLength UniformlyDistributedLoad => ForcePerLength.FromKilogramsForcePerCentimeter(
         Pressure.KilogramsForcePerSquareCentimeter * UnitStripWidth.Centimeters);
@@ -30,9 +30,9 @@ public record class FormworkSheathingLayerCheck : FormworkLayerCheck<FormworkShe
 
 public record class FormworkSupportLayerCheck : FormworkLayerCheck<FormworkSupport>
 {
-    public virtual Length SupportSpacing { get; set; }
-
     public virtual Length TributaryWidth { get; set; }
+
+    public virtual Length SupportSpacing { get; set; }
 
     public virtual ForcePerLength UniformlyDistributedLoad => ForcePerLength.FromKilogramsForcePerCentimeter(
         Pressure.KilogramsForcePerSquareCentimeter * TributaryWidth.Centimeters);
