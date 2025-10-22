@@ -1,3 +1,5 @@
+using static EngineeringFort.SteelConstructionManual.BeamFormulas;
+
 namespace EngineeringFort.Formwork;
 
 public abstract record class FormworkLayerCheck : Check
@@ -18,6 +20,8 @@ public record class FormworkSheathingLayerCheck : FormworkLayerCheck<FormworkShe
 
     public virtual ForcePerLength UniformlyDistributedLoad => ForcePerLength.FromKilogramsForcePerCentimeter(
         Pressure.KilogramsForcePerSquareCentimeter * UnitStripWidth.Centimeters);
+
+    public virtual Torque MaximumBendingMoment => SimpleBeam.UniformlyDistributedLoad.Mmax(UniformlyDistributedLoad, SupportSpacing);
 }
 
 public record class FormworkSupportLayerCheck : FormworkLayerCheck<FormworkSupport>
@@ -26,6 +30,8 @@ public record class FormworkSupportLayerCheck : FormworkLayerCheck<FormworkSuppo
 
     public virtual ForcePerLength UniformlyDistributedLoad => ForcePerLength.FromKilogramsForcePerCentimeter(
         Pressure.KilogramsForcePerSquareCentimeter * TributaryWidth.Centimeters);
+
+    public virtual Torque MaximumBendingMoment => ContinuousBeam.ThreeEqualSpans.AllSpansLoaded.Mmax(UniformlyDistributedLoad, TributaryWidth);
 }
 
 public record class FormworkTieRodLayerCheck : FormworkLayerCheck<FormworkTieRod>
