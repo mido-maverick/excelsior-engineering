@@ -18,6 +18,12 @@ public record class FormworkSheathingLayerCheck : FormworkLayerCheck<FormworkShe
 
     public virtual Length SupportSpacing { get; set; }
 
+    public virtual Volume UnitStripSectionModulus =>
+        RectangularCrossSection.CalculateSectionModulus(UnitStripWidth, FormworkComponent.Thickness);
+
+    public virtual AreaMomentOfInertia UnitStripMomentOfInertia =>
+        RectangularCrossSection.CalculateMomentOfInertia(UnitStripWidth, FormworkComponent.Thickness);
+
     public virtual ForcePerLength UniformlyDistributedLoad => ForcePerLength.FromKilogramsForcePerCentimeter(
         Pressure.KilogramsForcePerSquareCentimeter * UnitStripWidth.Centimeters);
 
@@ -25,7 +31,7 @@ public record class FormworkSheathingLayerCheck : FormworkLayerCheck<FormworkShe
 
     public virtual Pressure MaximumBendingStress => Pressure.FromKilogramsForcePerSquareCentimeter(
         MaximumBendingMoment.KilogramForceCentimeters /
-        RectangularCrossSection.CalculateSectionModulus(UnitStripWidth, FormworkComponent.Thickness).CubicCentimeters);
+        UnitStripSectionModulus.CubicCentimeters);
 
     public virtual QuantityCheck<Pressure> BendingStressCheck => new()
     {
