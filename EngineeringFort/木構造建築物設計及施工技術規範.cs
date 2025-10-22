@@ -98,6 +98,8 @@ public static class 木構造建築物設計及施工技術規範
                 (針闊葉樹別.闊葉, 木材類別.Ⅲ, 木材等級.上等) =>  80_000,
                 _ => double.NaN
             });
+
+            public Pressure ElasticModulus() => 纖維方向之彈性模數;
         }
 
         /// <summary>
@@ -122,6 +124,8 @@ public static class 木構造建築物設計及施工技術規範
             public static Pressure 垂直方向之短期容許拉應力(Length 厚度, 合板等級 等級) => 2 * 垂直方向之長期容許拉應力(厚度, 等級);
 
             public Pressure AllowableBendingStress(Length thickness) => 垂直方向之短期容許拉應力(thickness, 等級);
+
+            public Pressure ElasticModulus() => new();
         }
     }
 }
