@@ -1,5 +1,5 @@
 namespace EngineeringFort;
 
-public abstract record class Material
+public interface IMaterial
 {
 }
