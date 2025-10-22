@@ -5,9 +5,9 @@ public abstract record class FormworkLayerCheck : Check
     public virtual Pressure Pressure { get; set; }
 }
 
-public record class FormworkLayerCheck<T> : FormworkLayerCheck where T : FormworkComponent
+public abstract record class FormworkLayerCheck<T> : FormworkLayerCheck where T : FormworkComponent, new()
 {
-    public virtual T? FormworkComponent { get; set; }
+    public virtual T FormworkComponent { get; } = new();
 }
 
 public record class FormworkSheathingLayerCheck : FormworkLayerCheck<FormworkSheathing>
