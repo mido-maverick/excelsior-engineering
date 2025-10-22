@@ -18,6 +18,7 @@ What's included:
 |面積|Area|$A$|
 |梁|Beam||
 |**彎**|Bending||
+|彎矩|Bending Moment|$M$|
 |挫屈|Buckling||
 |懸臂梁|Cantilever Beam||
 |柱|Column||
@@ -41,7 +42,6 @@ What's included:
 |主梁|Girder||
 |接頭|Joint||
 |載重|Load||
-|彎矩|Moment|$M$|
 |慣性矩|Moment of Inertia|$I$|
 |平面圖|Plan||
 |剖面圖|Section||
