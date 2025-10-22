@@ -5,8 +5,42 @@ namespace EngineeringFort.Tests.Formwork;
 
 public class FormworkLayerCheckTest
 {
+    public static IEnumerable<object[]> MaximumDeflectionTestData =>
+    [
+        [
+            Length.FromCentimeters(0.15517),
+            Pressure.FromKilogramsForcePerSquareCentimeter(0.345),
+            Length.FromCentimeters(1.0),
+            Length.FromCentimeters(26.4),
+            Pressure.FromKilogramsForcePerSquareCentimeter(50000)
+        ],
+        [
+            Length.FromCentimeters(0.13507),
+            Pressure.FromKilogramsForcePerSquareCentimeter(0.483),
+            Length.FromCentimeters(1.0),
+            Length.FromCentimeters(25.5),
+            Pressure.FromKilogramsForcePerSquareCentimeter(70000)
+        ],
+    ];
+
+    [Theory]
+    [MemberData(nameof(MaximumDeflectionTestData))]
     public void FormworkSheathingLayerCheck_MaximumDeflection_ShouldBeCorrect(
-        Length expextedMaxDeflection, Pressure pressure, Length unitStripWidth, Length supportSpacing)
+        Length expextedMaxDeflection, Pressure pressure, Length unitStripWidth, Length supportSpacing, Pressure elasticModulus)
     {
+        // Arrange
+        var check = new FormworkSheathingLayerCheck()
+        {
+            Pressure = pressure,
+            UnitStripWidth = unitStripWidth,
+            SupportSpacing = supportSpacing,
+        };
+        check.FormworkComponent.ElasticModulus = elasticModulus;
+
+        // Act
+        var maxDeflection = check.MaximumDeflection;
+
+        // Assert
+        Assert.Equal(expextedMaxDeflection.Centimeters, maxDeflection.Centimeters, 5);
     }
 }
