@@ -22,6 +22,10 @@ public record class FormworkSheathingLayerCheck : FormworkLayerCheck<FormworkShe
 
 public record class FormworkSupportLayerCheck : FormworkLayerCheck<FormworkSupport>
 {
+    public virtual Length TributaryWidth { get; set; }
+
+    public virtual ForcePerLength UniformlyDistributedLoad => ForcePerLength.FromKilogramsForcePerCentimeter(
+        Pressure.KilogramsForcePerSquareCentimeter * TributaryWidth.Centimeters);
 }
 
 public record class FormworkTieRodLayerCheck : FormworkLayerCheck<FormworkTieRod>
