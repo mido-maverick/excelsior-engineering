@@ -23,7 +23,7 @@ public record class FormworkSheathingLayerCheck : FormworkLayerCheck<FormworkShe
 
     public virtual Torque MaximumBendingMoment => SimpleBeam.UniformlyDistributedLoad.Mmax(UniformlyDistributedLoad, SupportSpacing);
 
-    public virtual Pressure MaximumTensileStress => Pressure.FromKilogramsForcePerSquareCentimeter(
+    public virtual Pressure MaximumBendingStress => Pressure.FromKilogramsForcePerSquareCentimeter(
         MaximumBendingMoment.KilogramForceCentimeters /
         RectangularCrossSection.CalculateSectionModulus(UnitStripWidth, FormworkComponent.Thickness).CubicCentimeters);
 }
@@ -39,7 +39,7 @@ public record class FormworkSupportLayerCheck : FormworkLayerCheck<FormworkSuppo
 
     public virtual Torque MaximumBendingMoment => ContinuousBeam.ThreeEqualSpans.AllSpansLoaded.Mmax(UniformlyDistributedLoad, SupportSpacing);
 
-    public virtual Pressure MaximumTensileStress => Pressure.FromKilogramsForcePerSquareCentimeter(
+    public virtual Pressure MaximumBendingStress => Pressure.FromKilogramsForcePerSquareCentimeter(
         MaximumBendingMoment.KilogramForceCentimeters / FormworkComponent.CrossSection.SectionModulus.CubicCentimeters);
 }
 
