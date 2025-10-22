@@ -48,7 +48,7 @@ public static class 木構造建築物設計及施工技術規範
         /// <summary>
         /// 結構用木材 (Timber)
         /// </summary>
-        public record class 木材 : 結構用材料
+        public record class 木材 : 結構用材料, Formwork.IFormworkSupportMaterial
         {
             public 樹種 樹種 { get; set; }
 
@@ -103,7 +103,7 @@ public static class 木構造建築物設計及施工技術規範
         /// <summary>
         /// 結構用合板 (Plywood)
         /// </summary>
-        public record class 合板 : 結構用材料
+        public record class 合板 : 結構用材料, Formwork.IFormworkSheathingMaterial
         {
             public 合板等級 等級 { get; set; }
 
