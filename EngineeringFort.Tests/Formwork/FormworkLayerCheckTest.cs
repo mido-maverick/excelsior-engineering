@@ -12,6 +12,7 @@ public class FormworkLayerCheckTest
             Pressure.FromKilogramsForcePerSquareCentimeter(0.345),
             Length.FromCentimeters(1.0),
             Length.FromCentimeters(26.4),
+            Length.FromCentimeters(1.5),
             Pressure.FromKilogramsForcePerSquareCentimeter(50000)
         ],
         [
@@ -19,6 +20,7 @@ public class FormworkLayerCheckTest
             Pressure.FromKilogramsForcePerSquareCentimeter(0.483),
             Length.FromCentimeters(1.0),
             Length.FromCentimeters(25.5),
+            Length.FromCentimeters(1.5),
             Pressure.FromKilogramsForcePerSquareCentimeter(70000)
         ],
     ];
@@ -26,7 +28,8 @@ public class FormworkLayerCheckTest
     [Theory]
     [MemberData(nameof(MaximumDeflectionTestData))]
     public void FormworkSheathingLayerCheck_MaximumDeflection_ShouldBeCorrect(
-        Length expextedMaxDeflection, Pressure pressure, Length unitStripWidth, Length supportSpacing, Pressure elasticModulus)
+        Length expextedMaxDeflection, Pressure pressure, Length unitStripWidth,
+        Length supportSpacing, Length thickness, Pressure elasticModulus)
     {
         // Arrange
         var check = new FormworkSheathingLayerCheck()
@@ -35,6 +38,7 @@ public class FormworkLayerCheckTest
             UnitStripWidth = unitStripWidth,
             SupportSpacing = supportSpacing,
         };
+        check.FormworkComponent.Thickness = thickness;
         check.FormworkComponent.ElasticModulus = elasticModulus;
 
         // Act
