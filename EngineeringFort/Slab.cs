@@ -1,0 +1,6 @@
+namespace EngineeringFort;
+
+public record class Slab : IRegexPatternProvider<Slab>
+{
+    public static string RegexPattern { get; } = @"C?S\d{1,3}[a-z]?";
+}
