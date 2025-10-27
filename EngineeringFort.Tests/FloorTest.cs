@@ -17,6 +17,7 @@ public class FloorTest
     [InlineData(true, "RFL")]
     [InlineData(true, "RRF")]
     [InlineData(true, "PRF")]
+    [InlineData(true, "B1FL/1FL")]
     public void Floor_RegexPattern_ShouldBeCorrect(bool expected, string str)
     {
         Assert.Equal(expected, Regex.Match(str, Floor.RegexPattern).Success);
