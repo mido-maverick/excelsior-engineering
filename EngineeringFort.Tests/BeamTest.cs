@@ -6,6 +6,7 @@ public class BeamTest
 {
     [Theory]
     [InlineData(false, "")]
+    [InlineData(false, "'")]
     [InlineData(false, "1")]
     [InlineData(false, "G")]
     [InlineData(true, "G1")]
@@ -18,6 +19,9 @@ public class BeamTest
     [InlineData(true, "CG1")]
     [InlineData(true, "CG1a")]
     [InlineData(true, "G1a")]
+    [InlineData(true, "G1'")]
+    [InlineData(true, "G1'-1")]
+    [InlineData(true, "G1-1")]
     public void Beam_RegexPattern_ShouldBeCorrect(bool expected, string str)
     {
         Assert.Equal(expected, Regex.Match(str, Beam.RegexPattern).Success);
