@@ -29,9 +29,22 @@ public record class FormworkSheathingLayerCheck : FormworkLayerCheck<FormworkShe
 
     public virtual Torque MaximumBendingMoment => SimpleBeam.UniformlyDistributedLoad.Mmax(UniformlyDistributedLoad, SupportSpacing);
 
-    public virtual Pressure MaximumBendingStress => Pressure.FromKilogramsForcePerSquareCentimeter(
-        MaximumBendingMoment.KilogramForceCentimeters /
-        UnitStripSectionModulus.CubicCentimeters);
+    public virtual Pressure MaximumBendingStress
+    {
+        get
+        {
+            try
+            {
+                return Pressure.FromKilogramsForcePerSquareCentimeter(
+                    MaximumBendingMoment.KilogramForceCentimeters /
+                    UnitStripSectionModulus.CubicCentimeters);
+            }
+            catch (ArgumentException)
+            {
+                return new();
+            }
+        }
+    }
 
     public virtual QuantityCheck<Pressure> BendingStressCheck => new()
     {
@@ -58,8 +71,22 @@ public record class FormworkSupportLayerCheck : FormworkLayerCheck<FormworkSuppo
 
     public virtual Torque MaximumBendingMoment => ContinuousBeam.ThreeEqualSpans.AllSpansLoaded.Mmax(UniformlyDistributedLoad, SupportSpacing);
 
-    public virtual Pressure MaximumBendingStress => Pressure.FromKilogramsForcePerSquareCentimeter(
-        MaximumBendingMoment.KilogramForceCentimeters / FormworkComponent.CrossSection.SectionModulus.CubicCentimeters);
+    public virtual Pressure MaximumBendingStress
+    {
+        get
+        {
+            try
+            {
+                return Pressure.FromKilogramsForcePerSquareCentimeter(
+                    MaximumBendingMoment.KilogramForceCentimeters /
+                    FormworkComponent.CrossSection.SectionModulus.CubicCentimeters);
+            }
+            catch (ArgumentException)
+            {
+                return new();
+            }
+        }
+    }
 
     public virtual QuantityCheck<Pressure> BendingStressCheck => new()
     {
