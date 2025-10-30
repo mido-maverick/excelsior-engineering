@@ -4,5 +4,5 @@ public interface IFormworkSheathingMaterial : IMaterial
 {
     Pressure AllowableBendingStress(Length thickness);
 
-    Pressure ElasticModulus();
+    Pressure ElasticModulus(Length thickness);
 }

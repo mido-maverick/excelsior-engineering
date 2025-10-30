@@ -39,11 +39,12 @@ public record class FormworkSheathingLayerCheck : FormworkLayerCheck<FormworkShe
         Limit = FormworkComponent.AllowableBendingStress ?? new()
     };
 
-    public virtual Length MaximumDeflection => SimpleBeam.UniformlyDistributedLoad.Δmax(
-        UniformlyDistributedLoad,
-        SupportSpacing,
-        FormworkComponent.ElasticModulus,
-        UnitStripMomentOfInertia);
+    public virtual Length MaximumDeflection => FormworkComponent.ElasticModulus is Pressure elasticModulus ?
+        SimpleBeam.UniformlyDistributedLoad.Δmax(
+            UniformlyDistributedLoad,
+            SupportSpacing,
+            elasticModulus,
+            UnitStripMomentOfInertia) : new();
 }
 
 public record class FormworkSupportLayerCheck : FormworkLayerCheck<FormworkSupport>
