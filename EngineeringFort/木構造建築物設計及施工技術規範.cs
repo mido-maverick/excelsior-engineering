@@ -125,7 +125,7 @@ public static class 木構造建築物設計及施工技術規範
 
             public Pressure AllowableBendingStress(Length thickness) => 垂直方向之短期容許拉應力(thickness, 等級);
 
-            public Pressure ElasticModulus() => new();
+            public Pressure ElasticModulus() => Pressure.FromKilogramsForcePerSquareCentimeter(70000);
         }
     }
 }
