@@ -23,6 +23,14 @@ public class FormworkLayerCheckTest
             Length.FromCentimeters(1.5),
             Pressure.FromKilogramsForcePerSquareCentimeter(70000)
         ],
+        [
+            Length.FromCentimeters(0.18994),
+            Pressure.FromKilogramsForcePerSquareCentimeter(0.35455),
+            Length.FromCentimeters(1.0),
+            Length.FromCentimeters(30.0),
+            Length.FromCentimeters(1.5),
+            Pressure.FromKilogramsForcePerSquareCentimeter(70000)
+        ]
     ];
 
     [Theory]
