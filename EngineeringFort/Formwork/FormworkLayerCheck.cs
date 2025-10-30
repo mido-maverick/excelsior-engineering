@@ -59,6 +59,12 @@ public record class FormworkSupportLayerCheck : FormworkLayerCheck<FormworkSuppo
 
     public virtual Pressure MaximumBendingStress => Pressure.FromKilogramsForcePerSquareCentimeter(
         MaximumBendingMoment.KilogramForceCentimeters / FormworkComponent.CrossSection.SectionModulus.CubicCentimeters);
+
+    public virtual QuantityCheck<Pressure> BendingStressCheck => new()
+    {
+        Value = MaximumBendingStress,
+        Limit = FormworkComponent.AllowableBendingStress ?? new()
+    };
 }
 
 public record class FormworkTieRodLayerCheck : FormworkLayerCheck<FormworkTieRod>

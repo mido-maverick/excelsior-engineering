@@ -99,6 +99,8 @@ public static class 木構造建築物設計及施工技術規範
                 _ => double.NaN
             });
 
+            public Pressure AllowableBendingStress() => new();
+
             public Pressure ElasticModulus() => 纖維方向之彈性模數;
         }
 
