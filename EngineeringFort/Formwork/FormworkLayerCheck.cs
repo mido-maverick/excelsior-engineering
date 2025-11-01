@@ -9,7 +9,6 @@ public abstract record class FormworkLayerCheck : Check
 
 public abstract record class FormworkLayerCheck<T> : FormworkLayerCheck where T : FormworkComponent, new()
 {
-    [Display(Name = nameof(FormworkComponent), ResourceType = typeof(DisplayStrings))]
     public virtual T FormworkComponent { get; } = new();
 }
 
