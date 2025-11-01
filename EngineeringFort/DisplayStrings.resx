@@ -171,4 +171,25 @@
   <data name="FormworkSupportLayerCheck" xml:space="preserve">
     <value>Formwork Support Layer Check</value>
   </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="MaximumSidePressure" xml:space="preserve">
+    <value>Maximum Side Pressure</value>
+  </data>
+  <data name="UnitStripWidth" xml:space="preserve">
+    <value>Unit Strip Width</value>
+  </data>
+  <data name="ElasticModulus" xml:space="preserve">
+    <value>Elastic Modulus</value>
+  </data>
+  <data name="SupportSpacing" xml:space="preserve">
+    <value>Support Spacing</value>
+  </data>
+  <data name="UnitStripSectionModulus" xml:space="preserve">
+    <value>Unit Strip Section Modulus</value>
+  </data>
+  <data name="UniformlyDistributedLoad" xml:space="preserve">
+    <value>Uniformly Distributed Load</value>
+  </data>
 </root>

@@ -97,6 +97,15 @@ namespace EngineeringFort {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Elastic Modulus.
+        /// </summary>
+        public static string ElasticModulus {
+            get {
+                return ResourceManager.GetString("ElasticModulus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Floor.
         /// </summary>
         public static string Floor {
@@ -187,6 +196,24 @@ namespace EngineeringFort {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Maximum Side Pressure.
+        /// </summary>
+        public static string MaximumSidePressure {
+            get {
+                return ResourceManager.GetString("MaximumSidePressure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Quantity Check.
         /// </summary>
         public static string QuantityCheck {
@@ -219,6 +246,42 @@ namespace EngineeringFort {
         public static string Status {
             get {
                 return ResourceManager.GetString("Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Support Spacing.
+        /// </summary>
+        public static string SupportSpacing {
+            get {
+                return ResourceManager.GetString("SupportSpacing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uniformly Distributed Load.
+        /// </summary>
+        public static string UniformlyDistributedLoad {
+            get {
+                return ResourceManager.GetString("UniformlyDistributedLoad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unit Strip Section Modulus.
+        /// </summary>
+        public static string UnitStripSectionModulus {
+            get {
+                return ResourceManager.GetString("UnitStripSectionModulus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unit Strip Width.
+        /// </summary>
+        public static string UnitStripWidth {
+            get {
+                return ResourceManager.GetString("UnitStripWidth", resourceCulture);
             }
         }
     }

@@ -171,4 +171,25 @@
   <data name="FormworkSupportLayerCheck" xml:space="preserve">
     <value>模板支撐層檢核</value>
   </data>
+  <data name="Name" xml:space="preserve">
+    <value>名稱</value>
+  </data>
+  <data name="MaximumSidePressure" xml:space="preserve">
+    <value>最大側壓力</value>
+  </data>
+  <data name="UnitStripWidth" xml:space="preserve">
+    <value>單位寬度</value>
+  </data>
+  <data name="ElasticModulus" xml:space="preserve">
+    <value>彈性模數</value>
+  </data>
+  <data name="SupportSpacing" xml:space="preserve">
+    <value>支撐間距</value>
+  </data>
+  <data name="UnitStripSectionModulus" xml:space="preserve">
+    <value>單位斷面模數</value>
+  </data>
+  <data name="UniformlyDistributedLoad" xml:space="preserve">
+    <value>均佈載重</value>
+  </data>
 </root>
