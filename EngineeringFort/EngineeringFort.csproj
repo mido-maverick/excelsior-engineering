@@ -32,10 +32,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Resources-zh-TW.Designer.cs">
+    <Compile Update="Resources.zh-TW.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>Resources-zh-TW.resx</DependentUpon>
+      <DependentUpon>Resources.zh-TW.resx</DependentUpon>
     </Compile>
     <Compile Update="Resources.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -45,9 +45,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Resources-zh-TW.resx">
+    <EmbeddedResource Update="Resources.zh-TW.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources-zh-TW.Designer.cs</LastGenOutput>
+      <LastGenOutput>Resources.zh-TW.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
