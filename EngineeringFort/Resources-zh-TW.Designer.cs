@@ -59,5 +59,131 @@ namespace EngineeringFort {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 梁.
+        /// </summary>
+        internal static string Beam {
+            get {
+                return ResourceManager.GetString("Beam", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 檢核.
+        /// </summary>
+        internal static string Check {
+            get {
+                return ResourceManager.GetString("Check", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 斷面.
+        /// </summary>
+        internal static string CrossSection {
+            get {
+                return ResourceManager.GetString("CrossSection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 設計.
+        /// </summary>
+        internal static string Design {
+            get {
+                return ResourceManager.GetString("Design", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 樓層.
+        /// </summary>
+        internal static string Floor {
+            get {
+                return ResourceManager.GetString("Floor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 模板.
+        /// </summary>
+        internal static string Formwork {
+            get {
+                return ResourceManager.GetString("Formwork", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 模板構件.
+        /// </summary>
+        internal static string FormworkComponent {
+            get {
+                return ResourceManager.GetString("FormworkComponent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 模板分層檢核.
+        /// </summary>
+        internal static string FormworkLayerCheck {
+            get {
+                return ResourceManager.GetString("FormworkLayerCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 模板支撐材.
+        /// </summary>
+        internal static string FormworkSupport {
+            get {
+                return ResourceManager.GetString("FormworkSupport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 模板螺桿.
+        /// </summary>
+        internal static string FormworkTieRod {
+            get {
+                return ResourceManager.GetString("FormworkTieRod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 材料.
+        /// </summary>
+        internal static string Material {
+            get {
+                return ResourceManager.GetString("Material", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 數值檢核.
+        /// </summary>
+        internal static string QuantityCheck {
+            get {
+                return ResourceManager.GetString("QuantityCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 襯板.
+        /// </summary>
+        internal static string Sheathing {
+            get {
+                return ResourceManager.GetString("Sheathing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 版.
+        /// </summary>
+        internal static string Slab {
+            get {
+                return ResourceManager.GetString("Slab", resourceCulture);
+            }
+        }
     }
 }
