@@ -22,7 +22,7 @@ namespace EngineeringFort {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources_zh_TW {
+    public class Resources_zh_TW {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace EngineeringFort {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("EngineeringFort.Resources-zh-TW", typeof(Resources_zh_TW).Assembly);
@@ -51,7 +51,7 @@ namespace EngineeringFort {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace EngineeringFort {
         /// <summary>
         ///   Looks up a localized string similar to 梁.
         /// </summary>
-        internal static string Beam {
+        public static string Beam {
             get {
                 return ResourceManager.GetString("Beam", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace EngineeringFort {
         /// <summary>
         ///   Looks up a localized string similar to 檢核.
         /// </summary>
-        internal static string Check {
+        public static string Check {
             get {
                 return ResourceManager.GetString("Check", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace EngineeringFort {
         /// <summary>
         ///   Looks up a localized string similar to 斷面.
         /// </summary>
-        internal static string CrossSection {
+        public static string CrossSection {
             get {
                 return ResourceManager.GetString("CrossSection", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace EngineeringFort {
         /// <summary>
         ///   Looks up a localized string similar to 設計.
         /// </summary>
-        internal static string Design {
+        public static string Design {
             get {
                 return ResourceManager.GetString("Design", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace EngineeringFort {
         /// <summary>
         ///   Looks up a localized string similar to 樓層.
         /// </summary>
-        internal static string Floor {
+        public static string Floor {
             get {
                 return ResourceManager.GetString("Floor", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace EngineeringFort {
         /// <summary>
         ///   Looks up a localized string similar to 模板.
         /// </summary>
-        internal static string Formwork {
+        public static string Formwork {
             get {
                 return ResourceManager.GetString("Formwork", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace EngineeringFort {
         /// <summary>
         ///   Looks up a localized string similar to 模板構件.
         /// </summary>
-        internal static string FormworkComponent {
+        public static string FormworkComponent {
             get {
                 return ResourceManager.GetString("FormworkComponent", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace EngineeringFort {
         /// <summary>
         ///   Looks up a localized string similar to 模板分層檢核.
         /// </summary>
-        internal static string FormworkLayerCheck {
+        public static string FormworkLayerCheck {
             get {
                 return ResourceManager.GetString("FormworkLayerCheck", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace EngineeringFort {
         /// <summary>
         ///   Looks up a localized string similar to 模板支撐材.
         /// </summary>
-        internal static string FormworkSupport {
+        public static string FormworkSupport {
             get {
                 return ResourceManager.GetString("FormworkSupport", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace EngineeringFort {
         /// <summary>
         ///   Looks up a localized string similar to 模板螺桿.
         /// </summary>
-        internal static string FormworkTieRod {
+        public static string FormworkTieRod {
             get {
                 return ResourceManager.GetString("FormworkTieRod", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace EngineeringFort {
         /// <summary>
         ///   Looks up a localized string similar to 材料.
         /// </summary>
-        internal static string Material {
+        public static string Material {
             get {
                 return ResourceManager.GetString("Material", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace EngineeringFort {
         /// <summary>
         ///   Looks up a localized string similar to 數值檢核.
         /// </summary>
-        internal static string QuantityCheck {
+        public static string QuantityCheck {
             get {
                 return ResourceManager.GetString("QuantityCheck", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace EngineeringFort {
         /// <summary>
         ///   Looks up a localized string similar to 襯板.
         /// </summary>
-        internal static string Sheathing {
+        public static string Sheathing {
             get {
                 return ResourceManager.GetString("Sheathing", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace EngineeringFort {
         /// <summary>
         ///   Looks up a localized string similar to 版.
         /// </summary>
-        internal static string Slab {
+        public static string Slab {
             get {
                 return ResourceManager.GetString("Slab", resourceCulture);
             }
