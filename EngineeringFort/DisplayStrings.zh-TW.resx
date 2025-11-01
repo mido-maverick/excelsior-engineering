@@ -159,8 +159,8 @@
   <data name="Slab" xml:space="preserve">
     <value>版</value>
   </data>
-  <data name="Status" xml:space="preserve">
-    <value>狀態</value>
+  <data name="CheckStatus" xml:space="preserve">
+    <value>檢核狀態</value>
   </data>
   <data name="SideFormworkDesign" xml:space="preserve">
     <value>側向模板設計</value>
@@ -191,5 +191,44 @@
   </data>
   <data name="UniformlyDistributedLoad" xml:space="preserve">
     <value>均佈載重</value>
+  </data>
+  <data name="MaximumBendingMoment" xml:space="preserve">
+    <value>最大彎矩</value>
+  </data>
+  <data name="MaximumBendingStress" xml:space="preserve">
+    <value>最大彎應力</value>
+  </data>
+  <data name="MaximumDeflection" xml:space="preserve">
+    <value>最大撓度</value>
+  </data>
+  <data name="Pressure" xml:space="preserve">
+    <value>壓力</value>
+  </data>
+  <data name="Thickness" xml:space="preserve">
+    <value>厚度</value>
+  </data>
+  <data name="AllowableBendingStress" xml:space="preserve">
+    <value>容許彎應力</value>
+  </data>
+  <data name="IsValid" xml:space="preserve">
+    <value>檢核有效</value>
+  </data>
+  <data name="SubChecks" xml:space="preserve">
+    <value>子檢核</value>
+  </data>
+  <data name="UnitStripMomentOfInertia" xml:space="preserve">
+    <value>單位慣性矩</value>
+  </data>
+  <data name="BendingStressCheck" xml:space="preserve">
+    <value>彎應力檢核</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>值</value>
+  </data>
+  <data name="Limit" xml:space="preserve">
+    <value>限制</value>
+  </data>
+  <data name="TributaryWidth" xml:space="preserve">
+    <value>載重寬度</value>
   </data>
 </root>

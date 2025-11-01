@@ -159,8 +159,8 @@
   <data name="Slab" xml:space="preserve">
     <value>Slab</value>
   </data>
-  <data name="Status" xml:space="preserve">
-    <value>Status</value>
+  <data name="CheckStatus" xml:space="preserve">
+    <value>Check Status</value>
   </data>
   <data name="SideFormworkDesign" xml:space="preserve">
     <value>Side Formwork Design</value>
@@ -191,5 +191,44 @@
   </data>
   <data name="UniformlyDistributedLoad" xml:space="preserve">
     <value>Uniformly Distributed Load</value>
+  </data>
+  <data name="MaximumBendingMoment" xml:space="preserve">
+    <value>Maximum Bending Moment</value>
+  </data>
+  <data name="MaximumBendingStress" xml:space="preserve">
+    <value>Maximum Bending Stress</value>
+  </data>
+  <data name="MaximumDeflection" xml:space="preserve">
+    <value>Maximum Deflection</value>
+  </data>
+  <data name="Pressure" xml:space="preserve">
+    <value>Pressure</value>
+  </data>
+  <data name="Thickness" xml:space="preserve">
+    <value>Thickness</value>
+  </data>
+  <data name="AllowableBendingStress" xml:space="preserve">
+    <value>Allowable Bending Stress</value>
+  </data>
+  <data name="IsValid" xml:space="preserve">
+    <value>Is Valid</value>
+  </data>
+  <data name="SubChecks" xml:space="preserve">
+    <value>Sub-Checks</value>
+  </data>
+  <data name="UnitStripMomentOfInertia" xml:space="preserve">
+    <value>Unit Strip Moment Of Inertia</value>
+  </data>
+  <data name="BendingStressCheck" xml:space="preserve">
+    <value>Bending Stress Check</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Limit" xml:space="preserve">
+    <value>Limit</value>
+  </data>
+  <data name="TributaryWidth" xml:space="preserve">
+    <value>Tributary Width</value>
   </data>
 </root>

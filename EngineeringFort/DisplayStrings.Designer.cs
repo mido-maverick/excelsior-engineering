@@ -61,6 +61,15 @@ namespace EngineeringFort {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Allowable Bending Stress.
+        /// </summary>
+        public static string AllowableBendingStress {
+            get {
+                return ResourceManager.GetString("AllowableBendingStress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Beam.
         /// </summary>
         public static string Beam {
@@ -70,11 +79,29 @@ namespace EngineeringFort {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bending Stress Check.
+        /// </summary>
+        public static string BendingStressCheck {
+            get {
+                return ResourceManager.GetString("BendingStressCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Check.
         /// </summary>
         public static string Check {
             get {
                 return ResourceManager.GetString("Check", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check Status.
+        /// </summary>
+        public static string CheckStatus {
+            get {
+                return ResourceManager.GetString("CheckStatus", resourceCulture);
             }
         }
         
@@ -187,11 +214,56 @@ namespace EngineeringFort {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Is Valid.
+        /// </summary>
+        public static string IsValid {
+            get {
+                return ResourceManager.GetString("IsValid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Limit.
+        /// </summary>
+        public static string Limit {
+            get {
+                return ResourceManager.GetString("Limit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Material.
         /// </summary>
         public static string Material {
             get {
                 return ResourceManager.GetString("Material", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maximum Bending Moment.
+        /// </summary>
+        public static string MaximumBendingMoment {
+            get {
+                return ResourceManager.GetString("MaximumBendingMoment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maximum Bending Stress.
+        /// </summary>
+        public static string MaximumBendingStress {
+            get {
+                return ResourceManager.GetString("MaximumBendingStress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maximum Deflection.
+        /// </summary>
+        public static string MaximumDeflection {
+            get {
+                return ResourceManager.GetString("MaximumDeflection", resourceCulture);
             }
         }
         
@@ -210,6 +282,15 @@ namespace EngineeringFort {
         public static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pressure.
+        /// </summary>
+        public static string Pressure {
+            get {
+                return ResourceManager.GetString("Pressure", resourceCulture);
             }
         }
         
@@ -241,11 +322,11 @@ namespace EngineeringFort {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Status.
+        ///   Looks up a localized string similar to Sub-Checks.
         /// </summary>
-        public static string Status {
+        public static string SubChecks {
             get {
-                return ResourceManager.GetString("Status", resourceCulture);
+                return ResourceManager.GetString("SubChecks", resourceCulture);
             }
         }
         
@@ -259,11 +340,38 @@ namespace EngineeringFort {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Thickness.
+        /// </summary>
+        public static string Thickness {
+            get {
+                return ResourceManager.GetString("Thickness", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tributary Width.
+        /// </summary>
+        public static string TributaryWidth {
+            get {
+                return ResourceManager.GetString("TributaryWidth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Uniformly Distributed Load.
         /// </summary>
         public static string UniformlyDistributedLoad {
             get {
                 return ResourceManager.GetString("UniformlyDistributedLoad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unit Strip Moment Of Inertia.
+        /// </summary>
+        public static string UnitStripMomentOfInertia {
+            get {
+                return ResourceManager.GetString("UnitStripMomentOfInertia", resourceCulture);
             }
         }
         
@@ -282,6 +390,15 @@ namespace EngineeringFort {
         public static string UnitStripWidth {
             get {
                 return ResourceManager.GetString("UnitStripWidth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value.
+        /// </summary>
+        public static string Value {
+            get {
+                return ResourceManager.GetString("Value", resourceCulture);
             }
         }
     }
