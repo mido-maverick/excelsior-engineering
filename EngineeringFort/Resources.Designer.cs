@@ -133,11 +133,38 @@ namespace EngineeringFort {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Formwork Sheathing.
+        /// </summary>
+        public static string FormworkSheathing {
+            get {
+                return ResourceManager.GetString("FormworkSheathing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Formwork Sheathing Layer Check.
+        /// </summary>
+        public static string FormworkSheathingLayerCheck {
+            get {
+                return ResourceManager.GetString("FormworkSheathingLayerCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Formwork Support.
         /// </summary>
         public static string FormworkSupport {
             get {
                 return ResourceManager.GetString("FormworkSupport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Formwork Support Layer Check.
+        /// </summary>
+        public static string FormworkSupportLayerCheck {
+            get {
+                return ResourceManager.GetString("FormworkSupportLayerCheck", resourceCulture);
             }
         }
         
@@ -169,11 +196,11 @@ namespace EngineeringFort {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sheathing.
+        ///   Looks up a localized string similar to Side Formwork Design.
         /// </summary>
-        public static string Sheathing {
+        public static string SideFormworkDesign {
             get {
-                return ResourceManager.GetString("Sheathing", resourceCulture);
+                return ResourceManager.GetString("SideFormworkDesign", resourceCulture);
             }
         }
         
@@ -183,6 +210,15 @@ namespace EngineeringFort {
         public static string Slab {
             get {
                 return ResourceManager.GetString("Slab", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Status.
+        /// </summary>
+        public static string Status {
+            get {
+                return ResourceManager.GetString("Status", resourceCulture);
             }
         }
     }

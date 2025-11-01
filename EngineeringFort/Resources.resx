@@ -132,8 +132,8 @@
   <data name="Material" xml:space="preserve">
     <value>Material</value>
   </data>
-  <data name="Sheathing" xml:space="preserve">
-    <value>Sheathing</value>
+  <data name="FormworkSheathing" xml:space="preserve">
+    <value>Formwork Sheathing</value>
   </data>
   <data name="FormworkTieRod" xml:space="preserve">
     <value>Formwork Tie Rod</value>
@@ -158,5 +158,17 @@
   </data>
   <data name="Slab" xml:space="preserve">
     <value>Slab</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="SideFormworkDesign" xml:space="preserve">
+    <value>Side Formwork Design</value>
+  </data>
+  <data name="FormworkSheathingLayerCheck" xml:space="preserve">
+    <value>Formwork Sheathing Layer Check</value>
+  </data>
+  <data name="FormworkSupportLayerCheck" xml:space="preserve">
+    <value>Formwork Support Layer Check</value>
   </data>
 </root>

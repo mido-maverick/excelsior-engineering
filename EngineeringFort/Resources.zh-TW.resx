@@ -132,7 +132,7 @@
   <data name="Material" xml:space="preserve">
     <value>材料</value>
   </data>
-  <data name="Sheathing" xml:space="preserve">
+  <data name="FormworkSheathing" xml:space="preserve">
     <value>襯板</value>
   </data>
   <data name="FormworkTieRod" xml:space="preserve">
@@ -158,5 +158,17 @@
   </data>
   <data name="Slab" xml:space="preserve">
     <value>版</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>狀態</value>
+  </data>
+  <data name="SideFormworkDesign" xml:space="preserve">
+    <value>側向模板設計</value>
+  </data>
+  <data name="FormworkSheathingLayerCheck" xml:space="preserve">
+    <value>襯板層檢核</value>
+  </data>
+  <data name="FormworkSupportLayerCheck" xml:space="preserve">
+    <value>模板支撐層檢核</value>
   </data>
 </root>
