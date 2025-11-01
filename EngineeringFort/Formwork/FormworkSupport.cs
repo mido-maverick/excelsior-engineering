@@ -1,12 +1,12 @@
 namespace EngineeringFort.Formwork;
 
-[Display(Name = nameof(FormworkSupport), ResourceType = typeof(Resources))]
+[Display(Name = nameof(FormworkSupport), ResourceType = typeof(DisplayStrings))]
 public record class FormworkSupport : FormworkComponent
 {
-    [Display(Name = nameof(CrossSection), ResourceType = typeof(Resources))]
+    [Display(Name = nameof(CrossSection), ResourceType = typeof(DisplayStrings))]
     public virtual ICrossSection CrossSection { get; } = new RectangularCrossSection();
 
-    [Display(Name = nameof(Material), ResourceType = typeof(Resources))]
+    [Display(Name = nameof(Material), ResourceType = typeof(DisplayStrings))]
     public virtual IFormworkSupportMaterial? Material { get; set; }
 
     public virtual Pressure? AllowableBendingStress => Material?.AllowableBendingStress();

@@ -9,12 +9,12 @@ public interface IBottomFormworkDesign
 {
 }
 
-[Display(Name = nameof(SideFormworkDesign), ResourceType = typeof(Resources))]
+[Display(Name = nameof(SideFormworkDesign), ResourceType = typeof(DisplayStrings))]
 public record class SideFormworkDesign : FormworkDesign, ISideFormworkDesign
 {
     public virtual Pressure MaxSidePressure { get; set; }
 
-    [Display(Name = nameof(FormworkLayerCheck), ResourceType = typeof(Resources))]
+    [Display(Name = nameof(FormworkLayerCheck), ResourceType = typeof(DisplayStrings))]
     public FormworkLayerCheck?[] FormworkLayerChecks { get; } = new FormworkLayerCheck?[5];
 
     public override IEnumerable<ICheck> SubChecks => FormworkLayerChecks.OfType<ICheck>();

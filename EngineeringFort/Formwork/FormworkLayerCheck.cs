@@ -9,11 +9,11 @@ public abstract record class FormworkLayerCheck : Check
 
 public abstract record class FormworkLayerCheck<T> : FormworkLayerCheck where T : FormworkComponent, new()
 {
-    [Display(Name = nameof(FormworkComponent), ResourceType = typeof(Resources))]
+    [Display(Name = nameof(FormworkComponent), ResourceType = typeof(DisplayStrings))]
     public virtual T FormworkComponent { get; } = new();
 }
 
-[Display(Name = nameof(FormworkSheathingLayerCheck), ResourceType = typeof(Resources))]
+[Display(Name = nameof(FormworkSheathingLayerCheck), ResourceType = typeof(DisplayStrings))]
 public record class FormworkSheathingLayerCheck : FormworkLayerCheck<FormworkSheathing>
 {
     public virtual Length UnitStripWidth { get; set; }
@@ -62,7 +62,7 @@ public record class FormworkSheathingLayerCheck : FormworkLayerCheck<FormworkShe
             UnitStripMomentOfInertia) : new();
 }
 
-[Display(Name = nameof(FormworkSupportLayerCheck), ResourceType = typeof(Resources))]
+[Display(Name = nameof(FormworkSupportLayerCheck), ResourceType = typeof(DisplayStrings))]
 public record class FormworkSupportLayerCheck : FormworkLayerCheck<FormworkSupport>
 {
     public virtual Length TributaryWidth { get; set; }
