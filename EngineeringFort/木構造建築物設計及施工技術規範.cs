@@ -119,7 +119,7 @@ public static class 木構造建築物設計及施工技術規範
             public static Pressure 垂直方向之長期容許拉應力(Length 厚度, 合板等級 等級) => Pressure.FromKilogramsForcePerSquareCentimeter((厚度.Millimeters, 等級) switch
             {
                 (15, _) => 55,
-                _ => double.NaN
+                _ => 0
             });
 
             /// <summary>
