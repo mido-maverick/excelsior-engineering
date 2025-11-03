@@ -1,6 +1,5 @@
 namespace EngineeringFort.Formwork;
 
-[Display(Name = nameof(FormworkSheathing), ResourceType = typeof(DisplayStrings))]
 public record class FormworkSheathing : FormworkComponent
 {
     public virtual Length Thickness { get; set; }

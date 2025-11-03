@@ -9,7 +9,6 @@ public interface IBottomFormworkDesign
 {
 }
 
-[Display(Name = nameof(SideFormworkDesign), ResourceType = typeof(DisplayStrings))]
 public record class SideFormworkDesign : FormworkDesign, ISideFormworkDesign
 {
     public virtual Pressure MaximumSidePressure { get; set; }

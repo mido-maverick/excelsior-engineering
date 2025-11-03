@@ -1,6 +1,5 @@
 namespace EngineeringFort.Formwork;
 
-[Display(Name = nameof(FormworkSupport), ResourceType = typeof(DisplayStrings))]
 public record class FormworkSupport : FormworkComponent
 {
     public virtual ICrossSection CrossSection { get; } = new RectangularCrossSection();
