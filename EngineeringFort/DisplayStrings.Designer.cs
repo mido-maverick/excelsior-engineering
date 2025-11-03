@@ -115,6 +115,15 @@ namespace EngineeringFort {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cross-Sectional Area.
+        /// </summary>
+        public static string CrossSectionalArea {
+            get {
+                return ResourceManager.GetString("CrossSectionalArea", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Design.
         /// </summary>
         public static string Design {
@@ -214,6 +223,15 @@ namespace EngineeringFort {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Height.
+        /// </summary>
+        public static string Height {
+            get {
+                return ResourceManager.GetString("Height", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Is Valid.
         /// </summary>
         public static string IsValid {
@@ -277,6 +295,15 @@ namespace EngineeringFort {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Moment Of Inertia.
+        /// </summary>
+        public static string MomentOfInertia {
+            get {
+                return ResourceManager.GetString("MomentOfInertia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
         public static string Name {
@@ -300,6 +327,24 @@ namespace EngineeringFort {
         public static string QuantityCheck {
             get {
                 return ResourceManager.GetString("QuantityCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rectangular Cross Section.
+        /// </summary>
+        public static string RectangularCrossSection {
+            get {
+                return ResourceManager.GetString("RectangularCrossSection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Section Modulus.
+        /// </summary>
+        public static string SectionModulus {
+            get {
+                return ResourceManager.GetString("SectionModulus", resourceCulture);
             }
         }
         
@@ -399,6 +444,15 @@ namespace EngineeringFort {
         public static string Value {
             get {
                 return ResourceManager.GetString("Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Width.
+        /// </summary>
+        public static string Width {
+            get {
+                return ResourceManager.GetString("Width", resourceCulture);
             }
         }
     }

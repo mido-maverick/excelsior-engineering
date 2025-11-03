@@ -231,4 +231,22 @@
   <data name="TributaryWidth" xml:space="preserve">
     <value>載重寬度</value>
   </data>
+  <data name="Width" xml:space="preserve">
+    <value>寬度</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>高度</value>
+  </data>
+  <data name="CrossSectionalArea" xml:space="preserve">
+    <value>斷面積</value>
+  </data>
+  <data name="SectionModulus" xml:space="preserve">
+    <value>斷面模數</value>
+  </data>
+  <data name="MomentOfInertia" xml:space="preserve">
+    <value>慣性矩</value>
+  </data>
+  <data name="RectangularCrossSection" xml:space="preserve">
+    <value>矩形斷面</value>
+  </data>
 </root>

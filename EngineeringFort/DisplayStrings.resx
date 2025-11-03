@@ -231,4 +231,22 @@
   <data name="TributaryWidth" xml:space="preserve">
     <value>Tributary Width</value>
   </data>
+  <data name="Width" xml:space="preserve">
+    <value>Width</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="CrossSectionalArea" xml:space="preserve">
+    <value>Cross-Sectional Area</value>
+  </data>
+  <data name="SectionModulus" xml:space="preserve">
+    <value>Section Modulus</value>
+  </data>
+  <data name="MomentOfInertia" xml:space="preserve">
+    <value>Moment Of Inertia</value>
+  </data>
+  <data name="RectangularCrossSection" xml:space="preserve">
+    <value>Rectangular Cross Section</value>
+  </data>
 </root>
