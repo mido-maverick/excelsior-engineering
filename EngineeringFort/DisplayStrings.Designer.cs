@@ -223,6 +223,15 @@ namespace EngineeringFort {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Formwork Tie Rod Layer Check.
+        /// </summary>
+        public static string FormworkTieRodLayerCheck {
+            get {
+                return ResourceManager.GetString("FormworkTieRodLayerCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Height.
         /// </summary>
         public static string Height {

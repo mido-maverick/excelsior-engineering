@@ -249,4 +249,7 @@
   <data name="RectangularCrossSection" xml:space="preserve">
     <value>Rectangular Cross Section</value>
   </data>
+  <data name="FormworkTieRodLayerCheck" xml:space="preserve">
+    <value>Formwork Tie Rod Layer Check</value>
+  </data>
 </root>

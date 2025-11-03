@@ -249,4 +249,7 @@
   <data name="RectangularCrossSection" xml:space="preserve">
     <value>矩形斷面</value>
   </data>
+  <data name="FormworkTieRodLayerCheck" xml:space="preserve">
+    <value>模板螺桿層檢核</value>
+  </data>
 </root>
