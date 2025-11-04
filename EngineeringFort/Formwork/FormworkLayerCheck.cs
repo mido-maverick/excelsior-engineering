@@ -62,6 +62,8 @@ public record class FormworkSheathingLayerCheck : FormworkLayerCheck<FormworkShe
 
 public record class FormworkSupportLayerCheck : FormworkLayerCheck<FormworkSupport>
 {
+    public Orientation Orientation { get; set; }
+
     public virtual Length TributaryWidth { get; set; }
 
     public virtual Length SupportSpacing { get; set; }
