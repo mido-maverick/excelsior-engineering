@@ -11,6 +11,8 @@ public interface IBottomFormworkDesign
 
 public record class SideFormworkDesign : FormworkDesign, ISideFormworkDesign
 {
+    public virtual Length MaximumHeight { get; set; }
+
     public virtual Pressure MaximumSidePressure { get; set; }
 
     [Display(Name = nameof(FormworkLayerCheck), ResourceType = typeof(DisplayStrings))]
