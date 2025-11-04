@@ -1,4 +1,4 @@
-﻿using DocumentFormat.OpenXml;
+using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
 using SS = DocumentFormat.OpenXml.Spreadsheet;
@@ -180,6 +180,10 @@ public class Converter
         textElements.First().Text = text;
     }
 
+    protected void Set(SdtBlock sdtBlock, Array array)
+    {
+    }
+
     protected void Set(SdtElement sdtElement, object? obj, string? format = null)
     {
         switch (obj)
@@ -194,6 +198,9 @@ public class Converter
                 break;
             case null:
                 throw new NotImplementedException();
+            case Array a:
+                if (sdtElement is SdtBlock sdtBlock) Set(sdtBlock, a);
+                break;
             case object when obj.GetType().IsClass:
                 Populate(sdtElement, obj);
                 break;
