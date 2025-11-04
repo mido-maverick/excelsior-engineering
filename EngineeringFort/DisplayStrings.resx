@@ -252,4 +252,16 @@
   <data name="FormworkTieRodLayerCheck" xml:space="preserve">
     <value>Formwork Tie Rod Layer Check</value>
   </data>
+  <data name="Orientation" xml:space="preserve">
+    <value>Orientation</value>
+  </data>
+  <data name="Horizontal" xml:space="preserve">
+    <value>Horizontal</value>
+  </data>
+  <data name="Vertical" xml:space="preserve">
+    <value>Vertical</value>
+  </data>
+  <data name="MaximumHeight" xml:space="preserve">
+    <value>Maximum Height</value>
+  </data>
 </root>

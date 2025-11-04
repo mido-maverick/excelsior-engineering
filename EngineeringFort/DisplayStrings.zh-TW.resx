@@ -252,4 +252,16 @@
   <data name="FormworkTieRodLayerCheck" xml:space="preserve">
     <value>模板螺桿層檢核</value>
   </data>
+  <data name="Orientation" xml:space="preserve">
+    <value>方向</value>
+  </data>
+  <data name="Horizontal" xml:space="preserve">
+    <value>水平</value>
+  </data>
+  <data name="Vertical" xml:space="preserve">
+    <value>垂直</value>
+  </data>
+  <data name="MaximumHeight" xml:space="preserve">
+    <value>最大高度</value>
+  </data>
 </root>

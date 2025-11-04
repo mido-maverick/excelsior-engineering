@@ -241,6 +241,15 @@ namespace EngineeringFort {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Horizontal.
+        /// </summary>
+        public static string Horizontal {
+            get {
+                return ResourceManager.GetString("Horizontal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Is Valid.
         /// </summary>
         public static string IsValid {
@@ -295,6 +304,15 @@ namespace EngineeringFort {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Maximum Height.
+        /// </summary>
+        public static string MaximumHeight {
+            get {
+                return ResourceManager.GetString("MaximumHeight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Maximum Side Pressure.
         /// </summary>
         public static string MaximumSidePressure {
@@ -318,6 +336,15 @@ namespace EngineeringFort {
         public static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Orientation.
+        /// </summary>
+        public static string Orientation {
+            get {
+                return ResourceManager.GetString("Orientation", resourceCulture);
             }
         }
         
@@ -453,6 +480,15 @@ namespace EngineeringFort {
         public static string Value {
             get {
                 return ResourceManager.GetString("Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vertical.
+        /// </summary>
+        public static string Vertical {
+            get {
+                return ResourceManager.GetString("Vertical", resourceCulture);
             }
         }
         
