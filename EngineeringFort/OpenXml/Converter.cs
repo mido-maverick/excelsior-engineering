@@ -203,6 +203,9 @@ public class Converter
 
     protected void Set(SdtBlock sdtBlock, Array array)
     {
+        var templates = sdtBlock.SdtContentBlock!.Elements<SdtElement>().ToArray();
+        var objects = array.OfType<object>(); // TODO: use array.Cast<object>() instead to include null elements
+        GenerateElements(templates, objects);
     }
 
     protected void Set(SdtElement sdtElement, object? obj, string? format = null)
