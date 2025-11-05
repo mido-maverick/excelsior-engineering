@@ -115,10 +115,10 @@ public class Converter
         };
     }
 
-    protected List<TElement> GenerateElements<TElement>(TElement template, IEnumerable<object> objects)
+    protected TElement[] GenerateElements<TElement>(TElement template, IEnumerable<object> objects)
         where TElement : OpenXmlCompositeElement
     {
-        var elements = objects.Select(_ => (TElement)template.Clone()).ToList();
+        var elements = objects.Select(_ => (TElement)template.Clone()).ToArray();
         var previousElement = template;
         foreach (var (element, obj) in elements.Zip(objects))
         {
