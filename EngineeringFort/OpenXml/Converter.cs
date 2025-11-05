@@ -130,6 +130,27 @@ public class Converter
         return elements;
     }
 
+    protected TElement[] GenerateElements<TElement>(TElement[] templates, IEnumerable<object> objects)
+        where TElement : OpenXmlCompositeElement
+    {
+        var elements = objects.Select(obj =>
+        {
+            var template = templates.OfType<SdtElement>().FirstOrDefault(sdt =>
+                sdt.SdtProperties?.GetFirstChild<Tag>()?.Val == obj.GetType().Name) as OpenXmlCompositeElement ??
+                templates.First();
+            return (TElement)template.Clone();
+        }).ToArray();
+        var previousElement = templates.Last();
+        foreach (var (element, obj) in elements.Zip(objects))
+        {
+            previousElement.InsertAfterSelf(element);
+            if (element is SdtElement sdtElement) Set(sdtElement, obj);
+            previousElement = element;
+        }
+        templates.ToList().ForEach(t => t.Remove());
+        return elements;
+    }
+
     protected void Set(SdtElement sdtElement, string text)
     {
         switch (sdtElement)
