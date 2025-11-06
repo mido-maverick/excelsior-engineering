@@ -261,6 +261,12 @@
   <data name="Vertical" xml:space="preserve">
     <value>垂直</value>
   </data>
+  <data name="HorizontalOrientation" xml:space="preserve">
+    <value>橫向</value>
+  </data>
+  <data name="VerticalOrientation" xml:space="preserve">
+    <value>縱向</value>
+  </data>
   <data name="MaximumHeight" xml:space="preserve">
     <value>最大高度</value>
   </data>
