@@ -238,7 +238,7 @@ public class Converter
         int i => i.ToString(format ?? "G"),
         double d => d.ToString(format ?? "0.0##"),
         Enum e => e.ToString(format ?? "G"),
-        UnitsNet.IQuantity q =>
+        IQuantity q =>
             format is null ? q.ToString("0.0##", formatProvider: null) :
             format.EndsWith(" omit") ? q.Value.ToString(format.Replace(" omit", string.Empty)) :
             q.ToString(format, formatProvider: null),
