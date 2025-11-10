@@ -24,11 +24,12 @@ public class Converter
 {
     #region Fields
     private readonly IFileProvider? _fileProvider;
+    private readonly UnitSystemService? _unitSystemService;
     #endregion
 
     #region Constructors
     public Converter() { }
-    public Converter(IFileProvider fileProvider) { _fileProvider = fileProvider; }
+    public Converter(IFileProvider fileProvider, UnitSystemService unitSystemService) { _fileProvider = fileProvider; _unitSystemService = unitSystemService; }
     #endregion
 
     #region Properties
@@ -262,7 +263,7 @@ public class Converter
 
             var displayAttribute = property.GetCustomAttribute<DisplayAttribute>();
             var displayFormatAttribute = property.GetCustomAttribute<DisplayFormatAttribute>();
-            var format = displayFormatAttribute?.DataFormatString;
+            var format = displayFormatAttribute?.DataFormatString ?? _unitSystemService?.GetFormats(property)?.FirstOrDefault();
             var propertyValue = property.GetValue(dataModel);
             try
             {
