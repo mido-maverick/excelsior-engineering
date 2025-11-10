@@ -42,4 +42,13 @@ public class UnitSystemService
                 return null;
         }
     }
+
+    public string[]? GetFormats(MemberInfo memberInfo)
+    {
+        if (QuantityMemberFormats.TryGetValue(memberInfo, out var formats)) return formats;
+
+        var baseType = memberInfo.ReflectedType?.BaseType;
+        var baseMemberInfo = baseType?.GetMember(memberInfo.Name).FirstOrDefault();
+        return baseMemberInfo is not null ? GetFormats(baseMemberInfo) : null;
+    }
 }
