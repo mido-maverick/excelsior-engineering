@@ -241,7 +241,13 @@ public class Converter
         Enum e => e.ToString(format ?? "G"),
         IQuantity q =>
             format is null ? q.ToString("0.0##", formatProvider: null) :
-            format.EndsWith(" omit") ? q.Value.ToString(format.Replace(" omit", string.Empty)) :
+            format.EndsWith(" omit") ? ((Func<string>)(() =>
+            {
+                var formatParts = format.Split(' ');
+                var unit = UnitParser.Default.Parse(formatParts[1], q.Unit.GetType());
+                var value = q.As(unit);
+                return value.ToString(formatParts[0]);
+            }))() :
             q.ToString(format, formatProvider: null),
         _ => obj.ToString() ?? string.Empty,
     };
