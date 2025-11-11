@@ -256,7 +256,7 @@ public class Converter
 
     protected void Populate(SdtElement container, object dataModel)
     {
-        if (container is not (SdtBlock or SdtRow)) throw new NotSupportedException();
+        if (container is not (SdtBlock or SdtRun or SdtRow)) throw new NotSupportedException();
         var sdtElements = container.Descendants<SdtElement>();
         var properties = dataModel.GetType().GetProperties();
         foreach (var sdtElement in sdtElements)
