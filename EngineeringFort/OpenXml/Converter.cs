@@ -5,6 +5,7 @@ using SS = DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Wordprocessing;
 using WP = DocumentFormat.OpenXml.Wordprocessing;
 using Microsoft.Extensions.FileProviders;
+using Microsoft.Extensions.Logging;
 
 namespace EngineeringFort.OpenXml;
 
@@ -24,6 +25,7 @@ public class Converter
 {
     #region Fields
     private readonly IFileProvider? _fileProvider;
+    private readonly ILogger? _logger;
     private readonly UnitSystemService? _unitSystemService;
     #endregion
 
