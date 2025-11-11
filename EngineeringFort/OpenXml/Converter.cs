@@ -205,7 +205,7 @@ public class Converter
     protected void Set(SdtBlock sdtBlock, Array array)
     {
         var templates = sdtBlock.SdtContentBlock!.Elements<SdtElement>().ToArray();
-        var objects = array.OfType<object>(); // TODO: use array.Cast<object>() instead to include null elements
+        var objects = array.OfType<object>(); // TODO: use array.Cast<object>() instead to include null elements (sparse array)
         GenerateElements(templates, objects);
     }
 
