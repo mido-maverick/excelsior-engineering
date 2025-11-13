@@ -264,9 +264,14 @@ public class Converter
             var tagValue = sdtElement.SdtProperties?.GetFirstChild<Tag>()?.Val?.Value;
             if (tagValue is null) continue;
 
-            var property = properties.FirstOrDefault(p =>
-                p.Name == tagValue ||
-                p.GetCustomAttribute<DisplayAttribute>()?.Name == tagValue);
+            var property = properties.FirstOrDefault(prop =>
+            {
+                var name = prop.Name;
+                var displayName = prop.GetCustomAttribute<DisplayAttribute>()?.Name;
+                var localizedName = DisplayStrings.ResourceManager.GetString(name);
+                var localizedDisplayName = displayName is not null ? DisplayStrings.ResourceManager.GetString(displayName) : null;
+                return tagValue == name || tagValue == displayName || tagValue == localizedName || tagValue == localizedDisplayName;
+            });
             if (property is null) continue;
 
             var displayAttribute = property.GetCustomAttribute<DisplayAttribute>();
