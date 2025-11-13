@@ -110,6 +110,25 @@ public class Converter
     protected OpenXmlPackage OpenTemplate(string path)
     {
         var extension = Path.GetExtension(path).ToLowerInvariant();
+
+        if (_fileProvider is not null)
+        {
+            var fileInfo = _fileProvider.GetFileInfo(path);
+            if (fileInfo.Exists)
+            {
+                using var stream = fileInfo.CreateReadStream();
+                var memoryStream = new MemoryStream();
+                stream.CopyTo(memoryStream);
+                memoryStream.Position = 0;
+                return extension switch
+                {
+                    ".docx" or ".dotx" => WordprocessingDocument.Open(memoryStream, isEditable: false),
+                    ".xlsx" or ".xltx" => SpreadsheetDocument.Open(memoryStream, isEditable: false),
+                    _ => throw new NotSupportedException(),
+                };
+            }
+        }
+
         return extension switch
         {
             ".docx" or ".dotx" => WordprocessingDocument.Open(path, isEditable: false),
