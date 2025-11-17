@@ -1,4 +1,4 @@
-﻿namespace EngineeringFort;
+namespace EngineeringFort;
 
 public interface ICrossSection
 {
