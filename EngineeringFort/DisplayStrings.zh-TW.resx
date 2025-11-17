@@ -270,4 +270,10 @@
   <data name="MaximumHeight" xml:space="preserve">
     <value>最大高度</value>
   </data>
+  <data name="Review" xml:space="preserve">
+    <value>檢討</value>
+  </data>
+  <data name="BétonBrut" xml:space="preserve">
+    <value>清水模</value>
+  </data>
 </root>

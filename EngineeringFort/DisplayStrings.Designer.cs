@@ -88,6 +88,15 @@ namespace EngineeringFort {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Raw Concrete.
+        /// </summary>
+        public static string BétonBrut {
+            get {
+                return ResourceManager.GetString("BétonBrut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Check.
         /// </summary>
         public static string Check {
@@ -381,6 +390,15 @@ namespace EngineeringFort {
         public static string RectangularCrossSection {
             get {
                 return ResourceManager.GetString("RectangularCrossSection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Review.
+        /// </summary>
+        public static string Review {
+            get {
+                return ResourceManager.GetString("Review", resourceCulture);
             }
         }
         

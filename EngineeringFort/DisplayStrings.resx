@@ -270,4 +270,10 @@
   <data name="MaximumHeight" xml:space="preserve">
     <value>Maximum Height</value>
   </data>
+  <data name="Review" xml:space="preserve">
+    <value>Review</value>
+  </data>
+  <data name="BétonBrut" xml:space="preserve">
+    <value>Raw Concrete</value>
+  </data>
 </root>
