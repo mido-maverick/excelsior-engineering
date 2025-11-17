@@ -11,6 +11,8 @@ public interface IBottomFormworkDesign
 
 public record class SideFormworkDesign : FormworkDesign, ISideFormworkDesign
 {
+    public virtual string Name { get; set; } = string.Empty;
+
     public virtual Length MaximumHeight { get; set; }
 
     public virtual Pressure MaximumSidePressure { get; set; }
