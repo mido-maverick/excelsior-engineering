@@ -295,6 +295,9 @@ public class Converter
     protected void Populate(SdtElement container, object dataModel)
     {
         if (container is not (SdtBlock or SdtRun or SdtRow)) throw new NotSupportedException();
+
+        _logger?.LogDebug("Populating {ContainerType} with {DataModelType}.", container.GetType().Name, dataModel.GetType().Name);
+
         var sdtElements = container.Descendants<SdtElement>();
         var properties = dataModel.GetType().GetProperties();
         foreach (var sdtElement in sdtElements)
@@ -320,15 +323,18 @@ public class Converter
             {
                 Set(sdtElement, propertyValue, format);
             }
-            catch (NotImplementedException)
+            catch (NotImplementedException ex)
             {
+                _logger?.LogWarning(ex, "Skipped setting SdtElement '{SdtElementTag}'. Operation not implemented.", tagValue);
                 continue;
             }
-            catch (NotSupportedException)
+            catch (NotSupportedException ex)
             {
+                _logger?.LogWarning(ex, "Skipped setting SdtElement '{SdtElementTag}'. Functionality not supported.", tagValue);
                 continue;
             }
         }
+        _logger?.LogDebug("Populated {ContainerType} with {DataModelType}.", container.GetType().Name, dataModel.GetType().Name);
     }
     #endregion
 }
