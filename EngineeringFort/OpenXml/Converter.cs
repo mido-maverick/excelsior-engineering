@@ -178,6 +178,7 @@ public class Converter
         return elements;
     }
 
+    /// <exception cref="NotSupportedException" />
     protected void Set(SdtElement sdtElement, string text)
     {
         switch (sdtElement)
@@ -193,6 +194,7 @@ public class Converter
         }
     }
 
+    /// <exception cref="InvalidOperationException" />
     protected void Set(SdtRun sdtRun, string text)
     {
         var sdtContentRun = sdtRun.SdtContentRun ?? throw new InvalidOperationException();
@@ -208,6 +210,7 @@ public class Converter
         textElements.First().Text = text;
     }
 
+    /// <exception cref="InvalidOperationException" />
     protected void Set(SdtCell sdtCell, string text)
     {
         var sdtContentCell = sdtCell.SdtContentCell ?? throw new InvalidOperationException();
@@ -235,6 +238,8 @@ public class Converter
         GenerateElements(templates, objects);
     }
 
+    /// <exception cref="NotImplementedException" />
+    /// <exception cref="NotSupportedException" />
     protected void Set(SdtElement sdtElement, object? obj, string? format = null)
     {
         switch (obj)
