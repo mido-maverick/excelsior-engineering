@@ -31,7 +31,12 @@ public class Converter
 
     #region Constructors
     public Converter() { }
-    public Converter(IFileProvider fileProvider, UnitSystemService unitSystemService) { _fileProvider = fileProvider; _unitSystemService = unitSystemService; }
+    public Converter(ILogger logger, IFileProvider fileProvider, UnitSystemService unitSystemService)
+    {
+        _logger = logger;
+        _fileProvider = fileProvider;
+        _unitSystemService = unitSystemService;
+    }
     #endregion
 
     #region Properties
