@@ -233,7 +233,8 @@ public class Converter
 
     protected void Set(SdtBlock sdtBlock, Array array)
     {
-        var templates = sdtBlock.SdtContentBlock!.Elements<SdtElement>().ToArray();
+        var table = sdtBlock.SdtContentBlock!.GetFirstChild<WP.Table>();
+        var templates = table is not null ? table.Elements<SdtRow>().ToArray() : sdtBlock.SdtContentBlock!.Elements<SdtElement>().ToArray();
         var objects = array.OfType<object>(); // TODO: use array.Cast<object>() instead to include null elements (sparse array)
         GenerateElements(templates, objects);
     }
