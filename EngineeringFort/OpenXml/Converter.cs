@@ -303,7 +303,7 @@ public class Converter
 
         _logger?.LogDebug("Populating {ContainerType} with {DataModelType}.", container.GetType().Name, dataModel.GetType().Name);
 
-        var sdtElements = container.Descendants<SdtElement>();
+        var sdtElements = container.Descendants<SdtElement>().Reverse(); // HACK
         var properties = dataModel.GetType().GetProperties();
         foreach (var sdtElement in sdtElements)
         {
