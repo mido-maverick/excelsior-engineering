@@ -295,7 +295,7 @@ public class Converter
 
     protected void Populate(SdtElement container, object dataModel)
     {
-        if (container is not (SdtBlock or SdtRun or SdtRow)) throw new NotSupportedException();
+        if (container is not (SdtBlock or SdtRun or SdtRow or SdtCell)) throw new NotSupportedException();
 
         _logger?.LogDebug("Populating {ContainerType} with {DataModelType}.", container.GetType().Name, dataModel.GetType().Name);
 
