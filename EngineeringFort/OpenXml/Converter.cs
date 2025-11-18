@@ -330,12 +330,12 @@ public class Converter
             }
             catch (NotImplementedException ex)
             {
-                _logger?.LogWarning(ex, "Skipped setting SdtElement '{SdtElementTag}'. Operation not implemented.", tagValue);
+                _logger?.LogWarning(ex, "Skipped setting SdtElement '{SdtElementTag}' to '{PropertyValue}'. Operation not implemented.", tagValue, propertyValue);
                 continue;
             }
             catch (NotSupportedException ex)
             {
-                _logger?.LogWarning(ex, "Skipped setting SdtElement '{SdtElementTag}'. Functionality not supported.", tagValue);
+                _logger?.LogWarning(ex, "Skipped setting SdtElement '{SdtElementTag}' to '{PropertyValue}'. Functionality not supported.", tagValue, propertyValue);
                 continue;
             }
         }
