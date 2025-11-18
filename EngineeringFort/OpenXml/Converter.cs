@@ -181,6 +181,8 @@ public class Converter
     /// <exception cref="NotSupportedException" />
     protected void Set(SdtElement sdtElement, string text)
     {
+        _logger?.LogDebug("Setting '{SdtElementTag}' SdtElement text to '{Text}'.", sdtElement.SdtProperties?.GetFirstChild<Tag>()?.Val, text);
+
         switch (sdtElement)
         {
             case SdtRun sdtRun:
@@ -192,6 +194,8 @@ public class Converter
             default:
                 throw new NotSupportedException();
         }
+
+        _logger?.LogDebug("SdtElement text set.");
     }
 
     /// <exception cref="InvalidOperationException" />
