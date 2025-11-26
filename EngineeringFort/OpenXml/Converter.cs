@@ -80,6 +80,25 @@ public class Converter
         throw new NotImplementedException();
     }
 
+    private static object? ExtractData(string text, SS.NumberingFormat numberingFormat)
+    {
+        if (string.IsNullOrWhiteSpace(text)) return null;
+
+        var format = numberingFormat.FormatCode?.Value;
+        return format switch
+        {
+            "0_ " or
+            "#,##0_ " => int.Parse(text),
+            "0.0_ " or
+            "0.00_ " or
+            "0.000_ " or
+            "0.0000_ " or
+            "0.00000_ " => double.Parse(text),
+            null => text,
+            _ => throw new NotSupportedException($"Unsupported format: '{format}'."),
+        };
+    }
+
     private CellFormat? GetCellFormat(Cell cell)
     {
         var styleIndex = (int?)cell.StyleIndex?.Value ?? 0;
