@@ -80,6 +80,17 @@ public class Converter
         throw new NotImplementedException();
     }
 
+    private CellFormat? GetCellFormat(Cell cell)
+    {
+        var styleIndex = (int?)cell.StyleIndex?.Value ?? 0;
+        return CellFormats?.ElementAt(styleIndex) as CellFormat;
+    }
+
+    private SS.NumberingFormat? GetNumberingFormat(UInt32Value numberFormatId)
+    {
+        return NumberingFormats?.Elements<SS.NumberingFormat>().FirstOrDefault(nf => nf.NumberFormatId == numberFormatId);
+    }
+
     public virtual void GenerateDocument(Stream stream, object? dataModel = null)
     {
         WordprocessingDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document);
