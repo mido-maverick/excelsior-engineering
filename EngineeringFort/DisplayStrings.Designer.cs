@@ -421,6 +421,15 @@ namespace EngineeringFort {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Safety Factor.
+        /// </summary>
+        public static string SafetyFactor {
+            get {
+                return ResourceManager.GetString("SafetyFactor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Section Modulus.
         /// </summary>
         public static string SectionModulus {

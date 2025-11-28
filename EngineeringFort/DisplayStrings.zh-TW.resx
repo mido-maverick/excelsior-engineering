@@ -285,4 +285,7 @@
   <data name="ShearStressCheck" xml:space="preserve">
     <value>剪應力檢核</value>
   </data>
+  <data name="SafetyFactor" xml:space="preserve">
+    <value>安全係數</value>
+  </data>
 </root>

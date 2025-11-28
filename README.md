@@ -44,6 +44,7 @@ What's included:
 |載重|Load||
 |慣性矩|Moment of Inertia|$I$|
 |平面圖|Plan||
+|安全係數|Safety Factor||
 |剖面圖|Section||
 |斷面模數|Section Modulus|$S$|
 |**剪**|Shear||

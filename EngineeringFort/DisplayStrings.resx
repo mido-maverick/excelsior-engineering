@@ -285,4 +285,7 @@
   <data name="ShearStressCheck" xml:space="preserve">
     <value>Shear Stress Check</value>
   </data>
+  <data name="SafetyFactor" xml:space="preserve">
+    <value>Safety Factor</value>
+  </data>
 </root>
