@@ -52,6 +52,30 @@ public record class FormworkSheathingLayerCheck : FormworkLayerCheck<FormworkShe
         Limit = FormworkComponent.AllowableBendingStress ?? new()
     };
 
+    public virtual Force MaximumShearForce => SimpleBeam.UniformlyDistributedLoad.Vmax(UniformlyDistributedLoad, SupportSpacing);
+
+    public virtual double ShearStressSafetyFactor { get; set; } = 1;
+
+    public virtual Pressure MaximumShearStress
+    {
+        get
+        {
+            try
+            {
+                return ShearStressSafetyFactor * (MaximumShearForce / (UnitStripWidth * FormworkComponent.Thickness));
+            }
+            catch (ArgumentException)
+            {
+                return new();
+            }
+        }
+    }
+
+    public virtual QuantityCheck<Pressure> ShearStressCheck => new()
+    {
+        Value = MaximumShearStress
+    };
+
     public virtual Length MaximumDeflection => FormworkComponent.ElasticModulus is Pressure elasticModulus ?
         SimpleBeam.UniformlyDistributedLoad.Δmax(
             UniformlyDistributedLoad,
@@ -94,6 +118,28 @@ public record class FormworkSupportLayerCheck : FormworkLayerCheck<FormworkSuppo
     {
         Value = MaximumBendingStress,
         Limit = FormworkComponent.AllowableBendingStress ?? new()
+    };
+
+    public virtual Force MaximumShearForce => ContinuousBeam.ThreeEqualSpans.AllSpansLoaded.Vmax(UniformlyDistributedLoad, SupportSpacing);
+
+    public virtual Pressure MaximumShearStress
+    {
+        get
+        {
+            try
+            {
+                return MaximumShearForce / FormworkComponent.CrossSection.CrossSectionalArea;
+            }
+            catch (ArgumentException)
+            {
+                return new();
+            }
+        }
+    }
+
+    public virtual QuantityCheck<Pressure> ShearStressCheck => new()
+    {
+        Value = MaximumShearStress
     };
 }
 
