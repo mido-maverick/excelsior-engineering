@@ -276,4 +276,13 @@
   <data name="BétonBrut" xml:space="preserve">
     <value>Raw Concrete</value>
   </data>
+  <data name="MaximumShearForce" xml:space="preserve">
+    <value>Maximum Shear Force</value>
+  </data>
+  <data name="MaximumShearStress" xml:space="preserve">
+    <value>Maximum Shear Stress</value>
+  </data>
+  <data name="ShearStressCheck" xml:space="preserve">
+    <value>Shear Stress Check</value>
+  </data>
 </root>

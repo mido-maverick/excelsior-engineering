@@ -276,4 +276,13 @@
   <data name="BétonBrut" xml:space="preserve">
     <value>清水模</value>
   </data>
+  <data name="MaximumShearForce" xml:space="preserve">
+    <value>最大剪力</value>
+  </data>
+  <data name="MaximumShearStress" xml:space="preserve">
+    <value>最大剪應力</value>
+  </data>
+  <data name="ShearStressCheck" xml:space="preserve">
+    <value>剪應力檢核</value>
+  </data>
 </root>

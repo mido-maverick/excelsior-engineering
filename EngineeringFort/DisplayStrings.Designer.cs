@@ -331,6 +331,24 @@ namespace EngineeringFort {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Maximum Shear Force.
+        /// </summary>
+        public static string MaximumShearForce {
+            get {
+                return ResourceManager.GetString("MaximumShearForce", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maximum Shear Stress.
+        /// </summary>
+        public static string MaximumShearStress {
+            get {
+                return ResourceManager.GetString("MaximumShearStress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Maximum Side Pressure.
         /// </summary>
         public static string MaximumSidePressure {
@@ -408,6 +426,15 @@ namespace EngineeringFort {
         public static string SectionModulus {
             get {
                 return ResourceManager.GetString("SectionModulus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shear Stress Check.
+        /// </summary>
+        public static string ShearStressCheck {
+            get {
+                return ResourceManager.GetString("ShearStressCheck", resourceCulture);
             }
         }
         
