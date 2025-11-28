@@ -141,6 +141,13 @@ public record class FormworkSupportLayerCheck : FormworkLayerCheck<FormworkSuppo
     {
         Value = MaximumShearStress
     };
+
+    public virtual Length MaximumDeflection => FormworkComponent.ElasticModulus is Pressure elasticModulus ?
+        ContinuousBeam.ThreeEqualSpans.AllSpansLoaded.Δmax(
+            UniformlyDistributedLoad,
+            SupportSpacing,
+            elasticModulus,
+            FormworkComponent.CrossSection.MomentOfInertia) : new();
 }
 
 public record class FormworkTieRodLayerCheck : FormworkLayerCheck<FormworkTieRod>
